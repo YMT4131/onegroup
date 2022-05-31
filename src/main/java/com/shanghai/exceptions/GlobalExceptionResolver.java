@@ -25,12 +25,12 @@ public class GlobalExceptionResolver implements HandlerExceptionResolver {
         //用户登录拦截异常处理
         if(e instanceof NoLoginException){
             //直接重定向到登录页面
-            mv.setViewName("redirect:/index");
+            mv.setViewName("redirect:/login");
             return mv;
         }
         //默认异常处理
 
-        mv.setViewName("error");
+        mv.setViewName("404"); //跳转到404.html页面
         mv.addObject("code",400);
         mv.addObject("msg","系统异常，请重来一遍。。。");
 
