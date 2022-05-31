@@ -1,0 +1,18 @@
+2022-05-31 09:10:54.685 debug 96960 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 96960 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 09:10:54.685 debug 96960 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 09:10:54.761 debug 96960 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 09:10:54.761 debug 96960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 09:10:54.761 debug 96960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 09:10:55.671 debug 96960 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 09:10:56.126 debug 96960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 09:10:56.126 debug 96960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 09:10:56.126 debug 96960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 09:10:56.204 debug 96960 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 09:10:56.204 debug 96960 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1443 ms
+2022-05-31 09:10:56.392 debug 96960 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 09:10:56.549 debug 96960 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 09:10:56.580 debug 96960 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 09:10:56.863 debug 96960 --- [restartedMain] o.s.b.a.f.FreeMarkerAutoConfiguration    : Cannot find template location(s): [classpath:/views/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2022-05-31 09:10:56.926 debug 96960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.968 seconds (JVM running for 4.541)
