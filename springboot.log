@@ -17,3 +17,69 @@
 2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
 2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.968 seconds (JVM running for 4.541)
 2022-05-31 09:13:41.304 debug 96960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:01:05.508 debug 40948 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 40948 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 10:01:05.508 debug 40948 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 10:01:05.555 debug 40948 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 10:01:05.555 debug 40948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 10:01:05.555 debug 40948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 10:01:06.339 debug 40948 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 10:01:06.762 debug 40948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 10:01:06.778 debug 40948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 10:01:06.778 debug 40948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 10:01:06.857 debug 40948 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 10:01:06.857 debug 40948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
+2022-05-31 10:01:07.045 debug 40948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:01:07.107 debug 40948 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 10:01:07.186 debug 40948 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 10:01:07.217 debug 40948 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 10:01:07.593 debug 40948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 10:01:07.656 debug 40948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 10:01:07.656 debug 40948 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.617 seconds (JVM running for 3.769)
+2022-05-31 10:01:49.377 debug 40948 --- [http-nio-8989-exec-3] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 10:01:49.377 debug 40948 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 10:01:49.401 debug 40948 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2022-05-31 10:02:52.291 debug 40948 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:02:59.955 debug 87972 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 87972 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 10:02:59.955 debug 87972 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 10:03:00.017 debug 87972 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 10:03:00.019 debug 87972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 10:03:00.019 debug 87972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 10:03:00.959 debug 87972 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 10:03:01.445 debug 87972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 10:03:01.460 debug 87972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 10:03:01.460 debug 87972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 10:03:01.539 debug 87972 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 10:03:01.539 debug 87972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
+2022-05-31 10:03:01.758 debug 87972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:03:01.837 debug 87972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 10:03:01.931 debug 87972 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 10:03:01.962 debug 87972 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 10:03:02.433 debug 87972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 10:03:02.496 debug 87972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 10:03:02.511 debug 87972 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.034 seconds (JVM running for 5.448)
+2022-05-31 10:03:15.443 debug 87972 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 10:03:15.443 debug 87972 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 10:03:15.451 debug 87972 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-31 10:07:42.019 debug 87972 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:09:05.092 debug 101572 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 101572 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 10:09:05.100 debug 101572 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 10:09:05.164 debug 101572 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 10:09:05.172 debug 101572 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 10:09:05.172 debug 101572 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 10:09:06.084 debug 101572 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 10:09:06.652 debug 101572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 10:09:06.668 debug 101572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 10:09:06.668 debug 101572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 10:09:06.740 debug 101572 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 10:09:06.740 debug 101572 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1568 ms
+2022-05-31 10:09:06.956 debug 101572 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 10:09:07.020 debug 101572 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 10:09:07.116 debug 101572 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 10:09:07.156 debug 101572 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 10:09:07.589 debug 101572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 10:09:07.637 debug 101572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 10:09:07.645 debug 101572 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.106 seconds (JVM running for 4.517)
+2022-05-31 10:09:38.484 debug 101572 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 10:09:38.484 debug 101572 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 10:09:38.492 debug 101572 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-05-31 10:14:27.851 debug 101572 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

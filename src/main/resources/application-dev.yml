@@ -16,7 +16,7 @@ spring:
   #freemarker配置
   freemarker:
     content-type: text/html
-    suffix: .ftl
+    suffix: .html
     charset: utf-8
     template-loader-path: classpath:/views/
   #静态资源配置 如果不配置。默认会寻找static或public文件夹
