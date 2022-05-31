@@ -16,3 +16,4 @@
 2022-05-31 09:10:56.926 debug 96960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
 2022-05-31 09:10:56.990 debug 96960 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.968 seconds (JVM running for 4.541)
+2022-05-31 09:13:41.304 debug 96960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
