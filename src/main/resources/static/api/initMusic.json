@@ -1,0 +1,63 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "welcome"
+  },
+  "logoInfo": {
+    "title": "音乐平台",
+    "image": "images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "歌曲管理",
+          "href": "page/table.html",
+          "icon": "fa fa-headphones",
+          "target": "_self"
+        },
+        {
+          "title": "歌手管理",
+          "href": "page/table.html",
+          "icon": "fa fa-smile-o",
+          "target": "_self"
+        },
+        {
+          "title": "专辑管理",
+          "href": "page/table.html",
+          "icon": "fa fa-diamond",
+          "target": "_self"
+        },
+        {
+          "title": "音乐类型管理",
+          "href": "page/table.html",
+          "icon": "fa fa-star-o",
+          "target": "_self"
+        },
+        {
+          "title": "歌单管理",
+          "href": "page/table.html",
+          "icon": "fa fa-book",
+          "target": "_self"
+        },
+        {
+          "title": "用户管理",
+          "href": "page/table.html",
+          "icon": "fa fa-male",
+          "target": "_self"
+        },
+        {
+          "title": "角色管理",
+          "href": "page/table.html",
+          "icon": "fa fa-group",
+          "target": "_self"
+        }
+      ]
+    }
+  ]
+}

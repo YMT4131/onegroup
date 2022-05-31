@@ -83,3 +83,494 @@
 2022-05-31 10:09:38.484 debug 101572 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-05-31 10:09:38.492 debug 101572 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
 2022-05-31 10:14:27.851 debug 101572 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:30:45.525 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 99504 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:30:45.525 debug 99504 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:30:45.588 debug 99504 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 16:30:45.588 debug 99504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 16:30:45.588 debug 99504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 16:30:46.707 debug 99504 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:30:47.251 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:30:47.266 debug 99504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:30:47.266 debug 99504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:30:47.408 debug 99504 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:30:47.408 debug 99504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1820 ms
+2022-05-31 16:30:47.784 debug 99504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:30:47.909 debug 99504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:30:48.050 debug 99504 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 16:30:48.082 debug 99504 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 16:30:48.631 debug 99504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:30:48.693 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:30:48.693 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.883 seconds (JVM running for 5.998)
+2022-05-31 16:30:55.881 debug 99504 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:30:56.183 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 99504 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:30:56.183 debug 99504 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:30:56.434 debug 99504 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:30:56.481 debug 99504 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 16:30:56.497 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:30:56.497 debug 99504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:30:56.497 debug 99504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:30:56.512 debug 99504 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:30:56.512 debug 99504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 314 ms
+2022-05-31 16:30:56.591 debug 99504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:30:56.606 debug 99504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:30:56.763 debug 99504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:30:56.779 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:30:56.779 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.624 seconds (JVM running for 14.082)
+2022-05-31 16:30:56.779 debug 99504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 16:31:18.639 debug 99504 --- [http-nio-8989-exec-3] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 16:31:18.639 debug 99504 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 16:31:18.657 debug 99504 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2022-05-31 16:34:14.914 debug 99504 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:34:15.274 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 99504 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:34:15.274 debug 99504 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:34:15.588 debug 99504 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:34:15.635 debug 99504 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 16:34:15.667 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:34:15.667 debug 99504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:34:15.667 debug 99504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:34:15.683 debug 99504 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:34:15.683 debug 99504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 393 ms
+2022-05-31 16:34:15.729 debug 99504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:34:15.745 debug 99504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:34:15.902 debug 99504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:34:15.918 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:34:15.918 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.685 seconds (JVM running for 213.224)
+2022-05-31 16:34:15.918 debug 99504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 16:40:07.580 debug 99504 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:40:07.951 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 99504 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:40:07.951 debug 99504 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:40:08.224 debug 99504 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:40:08.267 debug 99504 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 16:40:08.278 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:40:08.279 debug 99504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:40:08.279 debug 99504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:40:08.292 debug 99504 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:40:08.292 debug 99504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 337 ms
+2022-05-31 16:40:08.334 debug 99504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:40:08.346 debug 99504 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:40:08.492 debug 99504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:40:08.506 debug 99504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:40:08.507 debug 99504 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.612 seconds (JVM running for 565.801)
+2022-05-31 16:40:08.508 debug 99504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 16:40:10.389 debug 99504 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 16:40:10.389 debug 99504 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 16:40:10.392 debug 99504 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-31 16:53:49.989 debug 99504 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:54:33.232 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 95340 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:54:33.232 debug 95340 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:54:33.293 debug 95340 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 16:54:33.293 debug 95340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 16:54:33.293 debug 95340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 16:54:34.110 debug 95340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:54:34.565 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:54:34.580 debug 95340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:54:34.580 debug 95340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:54:34.659 debug 95340 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:54:34.659 debug 95340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1366 ms
+2022-05-31 16:54:34.848 debug 95340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:54:34.910 debug 95340 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:54:35.004 debug 95340 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 16:54:35.036 debug 95340 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 16:54:35.412 debug 95340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:54:35.459 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:54:35.459 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.707 seconds (JVM running for 3.847)
+2022-05-31 16:54:57.619 debug 95340 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 16:54:57.619 debug 95340 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 16:54:57.626 debug 95340 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-05-31 16:59:31.855 debug 95340 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:59:32.424 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 95340 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 16:59:32.424 debug 95340 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 16:59:32.784 debug 95340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 16:59:32.847 debug 95340 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 16:59:32.863 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 16:59:32.863 debug 95340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 16:59:32.863 debug 95340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 16:59:32.878 debug 95340 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 16:59:32.878 debug 95340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 439 ms
+2022-05-31 16:59:32.941 debug 95340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 16:59:32.941 debug 95340 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 16:59:33.098 debug 95340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 16:59:33.114 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 16:59:33.146 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.773 seconds (JVM running for 301.521)
+2022-05-31 16:59:33.146 debug 95340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 17:00:11.172 debug 95340 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:00:11.533 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 95340 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:00:11.533 debug 95340 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:00:11.792 debug 95340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:00:11.831 debug 95340 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 17:00:11.831 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:00:11.846 debug 95340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:00:11.846 debug 95340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:00:11.846 debug 95340 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:00:11.846 debug 95340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 313 ms
+2022-05-31 17:00:11.894 debug 95340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:00:11.909 debug 95340 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 17:00:12.066 debug 95340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:00:12.082 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:00:12.082 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.578 seconds (JVM running for 340.46)
+2022-05-31 17:00:12.082 debug 95340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 17:03:11.815 debug 95340 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:03:11.816 debug 95340 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:03:11.817 debug 95340 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-31 17:11:51.217 debug 95340 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:11:51.752 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 95340 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:11:51.752 debug 95340 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:11:52.050 debug 95340 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:11:52.097 debug 95340 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 17:11:52.113 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:11:52.113 debug 95340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:11:52.113 debug 95340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:11:52.128 debug 95340 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:11:52.128 debug 95340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 376 ms
+2022-05-31 17:11:52.191 debug 95340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:11:52.207 debug 95340 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 17:11:52.348 debug 95340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:11:52.364 debug 95340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:11:52.364 debug 95340 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.667 seconds (JVM running for 1040.751)
+2022-05-31 17:11:52.364 debug 95340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 17:18:17.806 debug 95340 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:18:58.087 debug 109304 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109304 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:18:58.102 debug 109304 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:18:58.149 debug 109304 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:18:58.149 debug 109304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:18:58.149 debug 109304 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:18:58.902 debug 109304 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:18:59.357 debug 109304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:18:59.357 debug 109304 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:18:59.357 debug 109304 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:18:59.435 debug 109304 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:18:59.435 debug 109304 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1286 ms
+2022-05-31 17:18:59.673 debug 109304 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:18:59.828 debug 109304 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:18:59.859 debug 109304 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:19:00.267 debug 109304 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:19:00.314 debug 109304 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:19:00.314 debug 109304 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.677 seconds (JVM running for 3.859)
+2022-05-31 17:19:13.686 debug 109304 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:19:13.686 debug 109304 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:19:13.686 debug 109304 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-31 17:20:07.504 debug 109304 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:20:12.125 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 106864 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:20:12.131 debug 106864 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:20:12.173 debug 106864 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:20:12.173 debug 106864 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:20:12.173 debug 106864 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:20:12.863 debug 106864 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:20:13.302 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:20:13.318 debug 106864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:20:13.318 debug 106864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:20:13.443 debug 106864 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:20:13.443 debug 106864 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1270 ms
+2022-05-31 17:20:13.634 debug 106864 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:20:13.757 debug 106864 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:20:13.788 debug 106864 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:20:14.338 debug 106864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:20:14.384 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:20:14.384 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.764 seconds (JVM running for 4.034)
+2022-05-31 17:20:35.755 debug 106864 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:20:35.755 debug 106864 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:20:35.775 debug 106864 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2022-05-31 17:22:03.153 debug 106864 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:22:03.463 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 106864 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:22:03.463 debug 106864 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:22:03.699 debug 106864 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:22:03.762 debug 106864 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 17:22:03.762 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:22:03.762 debug 106864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:22:03.762 debug 106864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:22:03.777 debug 106864 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:22:03.777 debug 106864 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 314 ms
+2022-05-31 17:22:03.824 debug 106864 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:22:03.997 debug 106864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:22:03.997 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:22:03.997 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.578 seconds (JVM running for 113.649)
+2022-05-31 17:22:04.013 debug 106864 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 17:22:14.296 debug 106864 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:22:14.657 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 106864 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:22:14.657 debug 106864 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:22:14.892 debug 106864 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:22:14.939 debug 106864 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 17:22:14.939 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:22:14.939 debug 106864 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:22:14.939 debug 106864 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:22:14.954 debug 106864 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:22:14.954 debug 106864 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 297 ms
+2022-05-31 17:22:15.002 debug 106864 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:22:15.174 debug 106864 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:22:15.190 debug 106864 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:22:15.190 debug 106864 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.576 seconds (JVM running for 124.829)
+2022-05-31 17:22:15.190 debug 106864 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 17:22:34.643 debug 106864 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:22:34.644 debug 106864 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:22:34.647 debug 106864 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-05-31 17:26:33.356 debug 106864 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:26:40.212 debug 95276 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 95276 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:26:40.228 debug 95276 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:26:40.297 debug 95276 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:26:40.297 debug 95276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:26:40.297 debug 95276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:26:41.201 debug 95276 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:26:41.700 debug 95276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:26:41.703 debug 95276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:26:41.703 debug 95276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:26:41.781 debug 95276 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:26:41.781 debug 95276 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1484 ms
+2022-05-31 17:26:41.969 debug 95276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:26:42.111 debug 95276 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:26:42.142 debug 95276 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:26:42.516 debug 95276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:26:42.578 debug 95276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:26:42.578 debug 95276 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.829 seconds (JVM running for 4.133)
+2022-05-31 17:27:02.450 debug 95276 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:27:02.450 debug 95276 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:27:02.457 debug 95276 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-05-31 17:30:17.643 debug 95276 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:30:22.320 debug 109444 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109444 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:30:22.320 debug 109444 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:30:22.367 debug 109444 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:30:22.382 debug 109444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:30:22.382 debug 109444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:30:23.014 debug 109444 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:30:23.407 debug 109444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:30:23.422 debug 109444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:30:23.422 debug 109444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:30:23.501 debug 109444 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:30:23.501 debug 109444 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1119 ms
+2022-05-31 17:30:23.673 debug 109444 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:30:23.783 debug 109444 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:30:23.802 debug 109444 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:30:24.113 debug 109444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:30:24.160 debug 109444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:30:24.160 debug 109444 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.288 seconds (JVM running for 3.463)
+2022-05-31 17:30:46.093 debug 109444 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:30:46.093 debug 109444 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:30:46.109 debug 109444 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2022-05-31 17:35:10.458 debug 109444 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:35:14.945 debug 100800 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 100800 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:35:14.960 debug 100800 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:35:14.992 debug 100800 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:35:14.992 debug 100800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:35:14.992 debug 100800 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:35:15.668 debug 100800 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:35:16.013 debug 100800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:35:16.029 debug 100800 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:35:16.029 debug 100800 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:35:16.091 debug 100800 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:35:16.091 debug 100800 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1099 ms
+2022-05-31 17:35:16.270 debug 100800 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:35:16.390 debug 100800 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:35:16.421 debug 100800 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:35:16.735 debug 100800 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:35:16.782 debug 100800 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:35:16.782 debug 100800 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.253 seconds (JVM running for 3.362)
+2022-05-31 17:35:36.538 debug 100800 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:35:36.538 debug 100800 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:35:36.546 debug 100800 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-05-31 17:42:58.755 debug 100800 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:43:03.871 debug 107088 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 107088 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:43:03.871 debug 107088 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:43:03.958 debug 107088 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:43:03.959 debug 107088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:43:03.960 debug 107088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:43:04.692 debug 107088 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:43:05.135 debug 107088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:43:05.144 debug 107088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:43:05.145 debug 107088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:43:05.209 debug 107088 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:43:05.209 debug 107088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1249 ms
+2022-05-31 17:43:05.402 debug 107088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:43:05.539 debug 107088 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:43:05.570 debug 107088 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:43:05.921 debug 107088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:43:05.971 debug 107088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:43:05.976 debug 107088 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.645 seconds (JVM running for 3.858)
+2022-05-31 17:43:18.971 debug 107088 --- [http-nio-8989-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:43:18.971 debug 107088 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:43:18.977 debug 107088 --- [http-nio-8989-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-05-31 17:45:08.082 debug 107088 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:45:12.796 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 17:45:12.796 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 17:45:12.844 debug 109812 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-05-31 17:45:12.844 debug 109812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 17:45:12.859 debug 109812 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 17:45:13.468 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 17:45:13.829 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 17:45:13.829 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 17:45:13.829 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 17:45:13.907 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 17:45:13.912 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1048 ms
+2022-05-31 17:45:14.112 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 17:45:14.237 debug 109812 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-05-31 17:45:14.268 debug 109812 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-05-31 17:45:14.567 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 17:45:14.615 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 17:45:14.615 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.302 seconds (JVM running for 3.441)
+2022-05-31 17:45:29.361 debug 109812 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 17:45:29.361 debug 109812 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 17:45:29.377 debug 109812 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-05-31 18:38:30.283 debug 109812 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:38:30.988 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:38:30.988 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:38:31.365 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:38:31.444 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:38:31.490 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:38:31.490 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:38:31.490 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:38:31.506 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:38:31.506 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 509 ms
+2022-05-31 18:38:31.569 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:38:31.757 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:38:31.773 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:38:31.773 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.844 seconds (JVM running for 3200.6)
+2022-05-31 18:38:31.773 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:39:03.643 debug 109812 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:39:03.957 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:39:03.957 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:39:04.171 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:39:04.208 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:39:04.208 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:39:04.208 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:39:04.208 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:39:04.224 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:39:04.224 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 267 ms
+2022-05-31 18:39:04.286 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:39:04.490 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:39:04.522 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:39:04.522 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.598 seconds (JVM running for 3233.341)
+2022-05-31 18:39:04.522 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:40:19.374 debug 109812 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:40:19.657 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:40:19.657 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:40:19.876 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:40:19.923 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:40:19.923 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:40:19.923 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:40:19.923 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:40:19.938 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:40:19.938 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 281 ms
+2022-05-31 18:40:19.986 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:40:20.142 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:40:20.158 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:40:20.158 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.533 seconds (JVM running for 3308.974)
+2022-05-31 18:40:20.158 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:40:48.905 debug 109812 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:40:49.193 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:40:49.193 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:40:49.413 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:40:49.444 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:40:49.460 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:40:49.460 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:40:49.460 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:40:49.476 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:40:49.476 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 283 ms
+2022-05-31 18:40:49.522 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:40:49.664 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:40:49.680 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:40:49.680 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.523 seconds (JVM running for 3338.503)
+2022-05-31 18:40:49.680 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:41:15.378 debug 109812 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:15.791 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:41:15.791 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:41:16.037 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:41:16.084 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:41:16.092 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:41:16.100 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:41:16.100 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:41:16.100 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:41:16.100 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 298 ms
+2022-05-31 18:41:16.147 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:16.304 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:41:16.319 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:41:16.319 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.573 seconds (JVM running for 3365.137)
+2022-05-31 18:41:16.319 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:41:26.599 debug 109812 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:26.952 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:41:26.952 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:41:27.141 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:41:27.188 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:41:27.204 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:41:27.204 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:41:27.204 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:41:27.220 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:41:27.220 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 268 ms
+2022-05-31 18:41:27.251 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:27.424 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:41:27.440 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:41:27.440 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.519 seconds (JVM running for 3376.265)
+2022-05-31 18:41:27.440 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:41:56.160 debug 109812 --- [Thread-33] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:56.457 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:41:56.457 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:41:56.646 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:41:56.693 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:41:56.709 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:41:56.709 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:41:56.709 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:41:56.725 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:41:56.725 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 268 ms
+2022-05-31 18:41:56.756 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:41:56.929 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:41:56.945 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:41:56.945 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.52 seconds (JVM running for 3405.763)
+2022-05-31 18:41:56.945 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:42:31.838 debug 109812 --- [Thread-38] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:42:32.161 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:42:32.161 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:42:32.361 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:42:32.386 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:42:32.417 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:42:32.417 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:42:32.417 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:42:32.417 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:42:32.417 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 256 ms
+2022-05-31 18:42:32.465 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:42:32.621 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:42:32.621 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:42:32.621 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.503 seconds (JVM running for 3441.449)
+2022-05-31 18:42:32.621 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:42:39.825 debug 109812 --- [Thread-43] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:42:40.139 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:42:40.139 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:42:40.343 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:42:40.390 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:42:40.390 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:42:40.390 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:42:40.390 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:42:40.406 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:42:40.406 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 267 ms
+2022-05-31 18:42:40.453 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:42:40.594 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:42:40.610 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:42:40.610 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.503 seconds (JVM running for 3449.43)
+2022-05-31 18:42:40.610 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:43:46.288 debug 109812 --- [Thread-48] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:43:46.586 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:43:46.586 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:43:46.790 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:43:46.837 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:43:46.837 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:43:46.837 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:43:46.837 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:43:46.853 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:43:46.853 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 267 ms
+2022-05-31 18:43:46.900 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:43:47.057 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:43:47.073 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:43:47.073 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.514 seconds (JVM running for 3515.89)
+2022-05-31 18:43:47.073 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:44:09.661 debug 109812 --- [Thread-53] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:44:09.981 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 109812 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-05-31 18:44:09.981 debug 109812 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-05-31 18:44:10.183 debug 109812 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-05-31 18:44:10.230 debug 109812 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-05-31 18:44:10.230 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-05-31 18:44:10.230 debug 109812 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 18:44:10.230 debug 109812 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-05-31 18:44:10.245 debug 109812 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-05-31 18:44:10.245 debug 109812 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 251 ms
+2022-05-31 18:44:10.292 debug 109812 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-31 18:44:10.434 debug 109812 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 18:44:10.449 debug 109812 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-05-31 18:44:10.449 debug 109812 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.49 seconds (JVM running for 3539.268)
+2022-05-31 18:44:10.449 debug 109812 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-31 18:45:03.167 debug 109812 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
