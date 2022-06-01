@@ -6,7 +6,7 @@ layui.use(['form', 'table'], function () {
     /**
      * 歌单列表展示
      */
-    table.render({
+    var tableIns = table.render({
     elem: '#musicList',
     url: ctx+'/list/query',
     toolbar: '#toolbarDemo',
