@@ -6,23 +6,23 @@ layui.use(['form', 'table'], function () {
     /**
      * 歌单列表展示
      */
-    var tableIns = table.render({
-    elem: '#musicList',
+    table.render({
+    elem: '#currentTableId',
     url: ctx+'/list/query',
     toolbar: '#toolbarDemo',
     defaultToolbar: ['filter', 'exports', 'print', {
-    title: '提示',
-    layEvent: 'LAYTABLE_TIPS',
-    icon: 'layui-icon-tips'
-}],
+        title: '提示',
+        layEvent: 'LAYTABLE_TIPS',
+        icon: 'layui-icon-tips'
+    }],
     cols: [[
-{type: "checkbox", width: 50},
-{field: 'listName', width: 80, title: '歌单名称', sort: true},
-{field: 'listInfo', width: 150, title: '歌单介绍'},
-{field: 'type', width: 80, title: '音乐类型', sort: true},
-{title: '操作', minWidth: 150, toolbar: '#musicList', align: "center"}
+        {type: "checkbox", width: 50},
+        {field: 'listName', width: 150, title: '歌单名称', sort: true},
+        {field: 'listInfo', width: 250, title: '歌单介绍'},
+        {field: 'typeName', width: 100, title: '音乐类型', sort: true},
+        {title: '操作', minWidth: 150, toolbar: '#currentTableId', align: "center"}
     ]],
-    limits: [10, 15, 20, 25, 50, 100],
+    limits: [10, 25, 50, 100],
     limit: 15,
     page: true,
     skin: 'line'
