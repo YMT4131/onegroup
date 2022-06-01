@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanghai.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.shanghai.po.User">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_pwd" jdbcType="VARCHAR" property="userPwd" />
+    <result column="user_gender" jdbcType="VARCHAR" property="userGender" />
+    <result column="user_birthday" jdbcType="DATE" property="userBirthday" />
+    <result column="user_join_date" jdbcType="DATE" property="userJoinDate" />
+    <result column="is_VIP" jdbcType="INTEGER" property="isVip" />
+    <result column="is_valid" jdbcType="INTEGER" property="isValid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, 
+    is_valid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.shanghai.po.User">
+    insert into user (user_id, user_name, user_pwd, 
+      user_gender, user_birthday, user_join_date, 
+      is_VIP, is_valid)
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPwd,jdbcType=VARCHAR}, 
+      #{userGender,jdbcType=VARCHAR}, #{userBirthday,jdbcType=DATE}, #{userJoinDate,jdbcType=DATE}, 
+      #{isVip,jdbcType=INTEGER}, #{isValid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.shanghai.po.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userPwd != null">
+        user_pwd,
+      </if>
+      <if test="userGender != null">
+        user_gender,
+      </if>
+      <if test="userBirthday != null">
+        user_birthday,
+      </if>
+      <if test="userJoinDate != null">
+        user_join_date,
+      </if>
+      <if test="isVip != null">
+        is_VIP,
+      </if>
+      <if test="isValid != null">
+        is_valid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userGender != null">
+        #{userGender,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userJoinDate != null">
+        #{userJoinDate,jdbcType=DATE},
+      </if>
+      <if test="isVip != null">
+        #{isVip,jdbcType=INTEGER},
+      </if>
+      <if test="isValid != null">
+        #{isValid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.User">
+    update user
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        user_pwd = #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userGender != null">
+        user_gender = #{userGender,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        user_birthday = #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userJoinDate != null">
+        user_join_date = #{userJoinDate,jdbcType=DATE},
+      </if>
+      <if test="isVip != null">
+        is_VIP = #{isVip,jdbcType=INTEGER},
+      </if>
+      <if test="isValid != null">
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shanghai.po.User">
+    update user
+    set user_name = #{userName,jdbcType=VARCHAR},
+      user_pwd = #{userPwd,jdbcType=VARCHAR},
+      user_gender = #{userGender,jdbcType=VARCHAR},
+      user_birthday = #{userBirthday,jdbcType=DATE},
+      user_join_date = #{userJoinDate,jdbcType=DATE},
+      is_VIP = #{isVip,jdbcType=INTEGER},
+      is_valid = #{isValid,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="queryUserByName" parameterType="string" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"></include>
+    from user where is_valid=1 and user_name=#{userName}
+  </select>
+</mapper>
