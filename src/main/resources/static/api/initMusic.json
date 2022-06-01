@@ -41,7 +41,7 @@
         },
         {
           "title": "歌单管理",
-          "href": "page/table.html",
+          "href": "list/index",
           "icon": "fa fa-book",
           "target": "_self"
         },
