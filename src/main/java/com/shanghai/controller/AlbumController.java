@@ -2,6 +2,7 @@ package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
 import com.shanghai.base.LayerTableModel;
+import com.shanghai.base.ResultInfo;
 import com.shanghai.po.vo.AlbumModel;
 import com.shanghai.service.AlbumService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +48,17 @@ public class AlbumController extends BaseController {
     @ResponseBody
     public LayerTableModel queryAlbumPage(AlbumModel albumModel){
         return albumService.queryAlbumPage(albumModel);
+    }
+
+    /**
+     * 删除专辑
+     * @param ids
+     * @return
+     */
+    @RequestMapping("deleteAlbum")
+    @ResponseBody
+    public ResultInfo deleteAlbum(@RequestBody Integer[] ids){
+        albumService.deleteAlbum(ids);
+        return new ResultInfo();
     }
 }

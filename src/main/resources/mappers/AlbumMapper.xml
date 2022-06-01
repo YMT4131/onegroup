@@ -122,4 +122,10 @@
       </if>
     </where>
   </select>
+  <update id="deleteBatch">
+    update album set is_valid=0 where album_id in
+    <foreach collection="array" open="(" separator="," close=")" item="id">
+      #{id}
+    </foreach>
+  </update>
 </mapper>
