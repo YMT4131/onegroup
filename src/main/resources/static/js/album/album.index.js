@@ -52,9 +52,6 @@ layui.use(['form', 'table'], function () {
         var checkStatus = table.checkStatus(obj.config.id);
         if (obj.event === 'add') {  // 监听添加操作
             toAddOrUpdate();
-            $(window).on("resize", function () {
-                layer.full(index);
-            });
         } else if (obj.event === 'delete') {  // 监听删除操作
             deleteData(checkStatus.data,1);
         }
@@ -67,12 +64,7 @@ layui.use(['form', 'table'], function () {
     table.on('tool(currentTableFilter)', function (obj) {
         var data = obj.data; //获取当前行的数据
         if (obj.event === 'edit') {
-
-
-            $(window).on("resize", function () {
-                layer.full(index);
-            });
-            return false;
+            toAddOrUpdate(data.albumId);
         } else if (obj.event === 'delete') { //删除操作
             deleteData(data,2);
         }
@@ -80,11 +72,13 @@ layui.use(['form', 'table'], function () {
     //打开新增或修改页面
     function toAddOrUpdate(albumId){
         var url = ctx+'/album/toAddOrUpdate';
+        var tit = "添加专辑";
         if(albumId){
-            url = url +"&albumId="+albumId;
+            url = url +"?albumId="+albumId;
+            tit = "修改专辑";
         }
         var index = layer.open({
-            title: '添加专辑',
+            title: tit,
             type: 2,
             shade: 0.2,
             maxmin:true,
@@ -105,10 +99,10 @@ layui.use(['form', 'table'], function () {
             var ids = new Array(); //创建存放id的数组
             if(flag == 1){ //头部工具栏
                 for(var i=0;i<data.length;i++){
-                    ids.push(data[i].id);
+                    ids.push(data[i].albumId);
                 }
             }else{ //行工具栏
-                ids.push(data.id);
+                ids.push(data.albumId);
             }
 
             //请求后台

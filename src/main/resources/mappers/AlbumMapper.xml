@@ -128,4 +128,22 @@
       #{id}
     </foreach>
   </update>
+  <select id="querySingerList" parameterType="string" resultType="map">
+    select singer_id id,singer_name name from singer
+    <where>
+        is_valid=1
+     <if test="singerName != null">
+       and singer_name like concat('%',#{singerName},'%')
+     </if>
+    </where>
+  </select>
+  <select id="queryAlbumByName" parameterType="string" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"></include>
+    from album where is_valid=1 and album_name=#{albumName}
+  </select>
+  <select id="queryAlbumModelById" parameterType="integer" resultType="albumModel">
+    select a.*,s.singer_name singer
+    from album a LEFT JOIN singer s on s.singer_id=a.singer_id
+    where a.is_valid=1 and a.album_id=#{albumId}
+  </select>
 </mapper>
