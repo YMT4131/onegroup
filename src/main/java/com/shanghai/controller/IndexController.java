@@ -40,5 +40,13 @@ public class IndexController extends BaseController {
         return "welcome";
     }
 
+    /**
+     * 进入歌曲管理界面
+     * @return
+     */
+    @RequestMapping("toSongManagePage")
+    public String toSongManagePage(){
+        return "musicManager/songManage";
+    }
 
 }
