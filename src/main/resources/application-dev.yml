@@ -1,7 +1,7 @@
 #开发环境配置
 #端口号、项目路径
 server:
-  port: 8080
+  port: 8989
   servlet:
     context-path: /onegroup
 
@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.mchange.v2.c3p0.ComboPooledDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/musicapp?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://127.0.0.1:3306/music?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: root
   #freemarker配置
@@ -19,10 +19,6 @@ spring:
     suffix: .html
     charset: utf-8
     template-loader-path: classpath:/views/
-
-#    #兼容传统模式，解决${}为空报错
-#    settings:
-#      classic_compatible: true
   #静态资源配置 如果不配置。默认会寻找static或public文件夹
   resources:
     static-locations: classpath:/static/,classpath:/public/
