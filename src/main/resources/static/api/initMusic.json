@@ -29,7 +29,7 @@
         },
         {
           "title": "专辑管理",
-          "href": "page/table.html",
+          "href": "album/index",
           "icon": "fa fa-diamond",
           "target": "_self"
         },
