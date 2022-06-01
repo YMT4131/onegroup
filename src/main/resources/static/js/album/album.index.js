@@ -55,8 +55,8 @@ layui.use(['form', 'table'], function () {
                 layer.full(index);
             });
         } else if (obj.event === 'delete') {  // 监听删除操作
-            var checkStatus = table.checkStatus('currentTableId')
-                , data = checkStatus.data;
+            var checkStatus = table.checkStatus('currentTableId'),
+                data = checkStatus.data;
             layer.alert(JSON.stringify(data));
         }
     });
@@ -103,6 +103,10 @@ layui.use(['form', 'table'], function () {
             area: ['100%', '100%'],
             content:url
         });
+    }
+    //删除操作
+    function deleteData(){
+
     }
 
 });
