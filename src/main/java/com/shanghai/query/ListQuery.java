@@ -14,6 +14,16 @@ public class ListQuery extends BaseQuery {
 
     private String typeName;
 
+    private String musicName;
+
+    public String getMusicName() {
+        return musicName;
+    }
+
+    public void setMusicName(String musicName) {
+        this.musicName = musicName;
+    }
+
     public Integer getTypeId() {
         return typeId;
     }

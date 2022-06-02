@@ -90,9 +90,9 @@
       is_valid = #{isValid,jdbcType=INTEGER}
     where list_id = #{listId,jdbcType=INTEGER}
   </update>
-  <select id="selectByParams" parameterType="String" resultType="com.shanghai.query.ListQuery">
+  <select id="selectByParams" parameterType="com.shanghai.query.ListQuery" resultType="com.shanghai.query.ListQuery">
     select
-    l.list_id, l.list_name, l.list_info, t.type_name
+    l.list_id, l.list_name, l.list_info, t.type_id, t.type_name
     from
     list l
     left join
@@ -108,7 +108,7 @@
     <where>
       l.is_valid = 1
       <if test="listId != null and listId != ''">
-        and l.list_id like concat('%',#{listId},'%')
+        and l.list_id = #{listId}
       </if>
       <if test="listName != null and listName != ''">
         and l.list_name like concat('%',#{listName},'%')
@@ -126,7 +126,7 @@
     (#{listName}, #{listInfo}, #{typeId})
   </insert>
 
-  <update id="update" parameterType="com.shanghai.query.ListQuery">
+  <update id="updateList" parameterType="com.shanghai.query.ListQuery">
     update list
     <set >
       <if test="listName != null" >
@@ -135,9 +135,7 @@
       <if test="listInfo != null" >
         list_info = #{listInfo,jdbcType=VARCHAR},
       </if>
-      <if test="typeId != null" >
         type_id = #{typeId,jdbcType=INTEGER},
-      </if>
     </set>
     where list_id = #{listId,jdbcType=INTEGER}
   </update>
@@ -154,4 +152,86 @@
       #{id}
     </foreach>
   </update>
+
+  <select id="selectByListId" parameterType="Integer" resultType="com.shanghai.query.ListQuery">
+    select
+    l.list_id, l.list_name, l.list_info, t.type_id, t.type_name
+    from
+    list l
+    left join
+    (
+    select
+    type_id, type_name
+    from
+    type
+    where
+    is_valid = 1
+    ) t
+    on l.type_id = t.type_id
+    where
+      l.is_valid = 1
+    and l.list_id = #{listId}
+  </select>
+
+  <select id="queryAllTypes" resultType="Map">
+    select type_id as typeId, type_name as typeName
+    from type
+    where is_valid = 1
+  </select>
+
+  <select id="queryListHasMusicByListId" resultType="String" parameterType="Integer">
+    select m.music_name
+    from list_has_music lm
+    left join music m
+    on lm.music_id = m.music_id
+    where lm.list_id = #{listId}
+    and m.is_valid = 1
+  </select>
+
+  <select id="queryAllMusicByListId" resultType="Map" parameterType="Integer">
+    SELECT
+      m.music_id as musicId,
+      m.music_name as musicName,
+      CASE
+        WHEN IFNULL(m_lm.music_id, 0 ) = 0 THEN ""
+        ELSE "selected" END
+                   AS "selected"
+    FROM
+      music m
+        LEFT JOIN
+      ( SELECT
+          m1.music_id as music_id
+        FROM
+          music m1
+            LEFT JOIN
+          list_has_music lm
+          ON
+            m1.music_id = lm.music_id
+        WHERE
+          lm.list_id = #{listId}
+      ) m_lm
+      ON
+        m.music_id = m_lm.music_id
+    WHERE
+      m.is_valid =1
+  </select>
+
+  <delete id="deleteListHasMusicByListId" parameterType="Integer">
+    delete from
+    list_has_music
+    where list_id = #{listId}
+  </delete>
+
+  <insert id="insertListHasMusic">
+    insert into
+    list_has_music
+    (list_id, music_id)
+    values
+    (#{listId},#{musicId})
+  </insert>
+
+  <select id="getMaxListId" resultType="Integer">
+    select max(list_id) as listId
+    from list
+  </select>
 </mapper>
