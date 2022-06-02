@@ -94,6 +94,7 @@
       </if>
     </trim>
   </insert>
+  <!--行工具栏-单条记录的编辑-->
   <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Music" >
     update music
     <set >
@@ -185,5 +186,20 @@
     where
       music_id = #{id}
   </update>
+
+  <!--批量删除 本质为更改isValid的值 头部工具栏-->
+  <update id="deleteBatch">
+    update
+      music
+    set
+      is_valid = 0
+    where
+      music_id
+    in
+    <foreach collection="array" separator="," open="(" close=")" item="musicId">
+      #{musicId}
+    </foreach>
+  </update>
+
 
 </mapper>

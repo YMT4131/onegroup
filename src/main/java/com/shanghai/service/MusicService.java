@@ -42,7 +42,7 @@ public class MusicService extends BaseService<Music,Integer> {
     }
 
     /**
-     *  执行删除操作-实际上是更改isValid的值，绑定的是行工具栏右侧的
+     *  执行删除操作-实际上是更改isValid的值，绑定的是行工具栏右侧的删除
      *  1.判断musicId非空
      *  2.调用dao层方法，判断受影响行数
      * @param musicId
@@ -54,4 +54,35 @@ public class MusicService extends BaseService<Music,Integer> {
                 musicMapper.selectByPrimaryKey(musicId) == null,"所删除的记录不存在！");
         AssertUtil.isTrue(musicMapper.deleteByPrimaryKey(musicId) != 1,"删除失败！");
     }
+
+    /**
+     * 编辑操作-歌曲行工具栏--不理解
+     *    1.参数校验
+     *    --musicId非空，且数据库中对应的数据非空！--主键不能改
+     *    --musicName 非空
+     *    --singerName 非空
+     *    --albumName  非空
+     *    --typeName   非空
+     *    2.默认参数
+     *    --isForVip  默认为0--非会员可听
+     *    --isValid   默认为1--有效
+     *    3.调用dao层方法，判断受影响行数
+     */
+//    @Transactional(propagation = Propagation.REQUIRED)
+//    public void updateMusic(){
+//
+//    }
+    /**
+     * 执行批量删除操作-实际上是更改isValid的值，绑定的是头部工具栏的删除
+     *   1.判断数组ids非空
+     *   2.调用dao层方法，判断受影响行数
+     * @param ids
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void delBatch(Integer[] ids){
+        AssertUtil.isTrue(ids.length == 0 || null == ids ,"请选择需要删除的记录！");
+        AssertUtil.isTrue(musicMapper.deleteBatch(ids) != ids.length,"删除失败!");
+
+    }
+
 }
