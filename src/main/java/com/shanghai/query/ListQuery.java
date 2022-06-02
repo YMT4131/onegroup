@@ -4,11 +4,31 @@ import com.shanghai.base.BaseQuery;
 
 public class ListQuery extends BaseQuery {
 
+    private Integer listId;
+
     private String listName;
 
     private String listInfo;
 
+    private Integer typeId;
+
     private String typeName;
+
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
+
+    public Integer getListId() {
+        return listId;
+    }
+
+    public void setListId(Integer listId) {
+        this.listId = listId;
+    }
 
     public String getListName() {
         return listName;
