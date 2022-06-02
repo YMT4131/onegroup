@@ -22,10 +22,7 @@
     from music
     where music_id = #{musicId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from music
-    where music_id = #{musicId,jdbcType=INTEGER}
-  </delete>
+
   <insert id="insert" parameterType="com.shanghai.po.Music" >
     insert into music (music_id, music_name, singer_id, 
       album_id, type_id_1, type_id_2, 
@@ -139,13 +136,15 @@
       is_valid = #{isValid,jdbcType=INTEGER}
     where music_id = #{musicId,jdbcType=INTEGER}
   </update>
-
+  <!--
+    搜索按钮绑定
+      多条件查询
+  -->
   <select id="searchMusic" resultType="com.shanghai.model.MusicModel"
           parameterType="com.shanghai.query.MusicQuery">
     select
         music_id,m.singer_id,m.album_id,type_id_1,type_id_2,
-        type_id_3,is_for_VIP,m.is_valid,
-        music_name,
+        type_id_3,is_for_VIP,music_name,
         s.singer_name as singerName,
         a.album_name as albumName
     from
@@ -159,6 +158,7 @@
     on
         m.album_id = a.album_id
     <where>
+      m.is_valid = 1
       <if test="musicName != null and musicName != ''">
         and music_name like concat('%',#{musicName},'%')
       </if>
@@ -168,11 +168,22 @@
       <if test="albumName != null and albumName != ''">
         and a.album_name like concat('%',#{albumName},'%')
       </if>
-
     </where>
-
-
-    
   </select>
+
+  <!--
+      删除操作
+        实际为更改isValid值为0
+          0：代表删除
+          1：代表存在状态
+    -->
+  <update id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    update
+      music
+    set
+      is_valid = 0
+    where
+      music_id = #{id}
+  </update>
 
 </mapper>

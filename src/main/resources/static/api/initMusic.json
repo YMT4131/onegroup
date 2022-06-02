@@ -17,7 +17,7 @@
       "child": [
         {
           "title": "歌曲管理",
-          "href": "page/table.html",
+          "href": "toSongManagePage",
           "icon": "fa fa-headphones",
           "target": "_self"
         },
