@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <#include "../common.html">
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+
+        <fieldset class="table-search-fieldset">
+            <legend>搜索信息</legend>
+            <div style="margin: 10px 10px 10px 10px">
+                <form class="layui-form layui-form-pane" action="">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">歌曲名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="musicName" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">歌手</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="singerName" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">专辑</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="albumName" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <a class="layui-btn search_btn" data-type="reload"><i
+                                    class="layui-icon">&#xe615;</i> 搜索</a>
+<!--                            <button type="button" class="layui-btn layui-btn-primary" -->
+<!--                                    lay-filter="data-search-btn"><i class="layui-icon"></i> 搜 索</button>-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </fieldset>
+        <!--头部工具栏-->
+        <script type="text/html" id="toolbarDemo">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
+            </div>
+        </script>
+
+        <table class="layui-table" id="currentTableId" lay-filter="currentTableFilter"></table>
+        <!--行工具栏-->
+        <script type="text/html" id="currentTableBar">
+            <a class="layui-btn layui-btn-normal layui-btn-xs data-count-edit" lay-event="edit">编辑</a>
+            <a class="layui-btn layui-btn-xs layui-btn-danger data-count-delete" lay-event="delete">删除</a>
+        </script>
+
+    </div>
+</div>
+<script>
+    layui.use(['form', 'table'], function () {
+        var $ = layui.jquery,
+            form = layui.form,
+            table = layui.table;
+
+        var tableIns = table.render({
+            id : "songManageSearch",//表格唯一标识
+            elem: '#currentTableId',//table里容器id的属性值
+            url: ctx+'/musicManage/list',//后台映射地址
+            toolbar: '#toolbarDemo',
+            defaultToolbar: ['filter', 'exports', 'print', {
+                title: '提示',
+                layEvent: 'LAYTABLE_TIPS',
+                icon: 'layui-icon-tips'
+            }],
+            cols: [[
+                {type: "checkbox", width: 50},
+                {field: 'musicId', title: '编号', sort: true},
+                {field: 'musicName', title: '歌名'},
+                {field: 'singerName', title: '歌手名', sort: true},
+                {field: 'albumName', title: '专辑名'},
+                {field: 'typeId1', title: '所属类型', sort:true},//一首歌好几种不同的类型，怎么在前端数据表格展示？
+                {field: 'isForVip', title: '是否为会员可听', sort: true},//前端怎么展示是否为会员可听
+                //{field: 'isValid', title: '状态', sort: true},isValid --为删除做准备
+                //行工具栏
+                {title: '操作', templet:'#currentTableBar',fixed:'right',align:'center', minWidth:150}
+            ]],
+            limits: [10, 15, 20, 25, 50, 100],
+            limit: 15,
+            page: true,
+            skin: 'line'
+        });
+        /**
+         * 搜索按钮点击事件的绑定-11
+         */
+        $(".search_btn").click(function (){
+            /**
+             *  搜索按钮绑定--多条件查询
+             */
+            tableIns.reload({
+                //设置需要传递给后端的参数
+                where: { //设定异步数据接口的额外参数，任意设
+                    // 获取文本框、下拉框的值，设置传递的参数
+                    musicName: $("[name = 'musicName']").val()
+                    ,singerName: $("[name = 'singerName']").val()
+                    ,albumName: $("[name = 'albumName']").val()
+                }
+                ,page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+            });
+        })
+
+        /**
+         * 表格行工具栏监听事件
+         *    tool()-括号内的为table标签的 lay-filter 属性值
+         */
+        table.on('tool(currentTableFilter)',function (data) {
+            console.log(data);
+            //判断类型
+            if(data.event == "edit"){
+                //编辑
+                var musicId = data.data.musicId;
+                console.log(musicId);
+                //打开编辑窗口
+                OpenUpdateOrInsertMusicDialog(musicId);
+
+            } else if (data.event == "delete"){
+                //删除操作
+                // 询问是否确认删除
+                layer.confirm("确定要删除这条记录吗？", {icon: 3, title:"歌曲数据管理"}, function (index) {
+                    // 关闭窗口
+                    layer.close(index);
+                    // 发送ajax请求，删除记录
+                    $.ajax({
+                        type:"post",
+                        url: ctx + "/musicManage/delOne",
+                        data:{
+                            //传递到后端的数据
+                            musicId: data.data.musicId
+                        },
+                        dataType:"json",
+                        success:function (result) {
+                            if (result.code == 200) {
+                                //提示成功
+                                layer.msg("删除成功",{icon: 6})
+                                // 加载表格
+                                tableIns.reload();
+                            } else {
+                                //提示失败
+                                layer.msg(result.msg, {icon: 5});
+                            }
+                        }
+                    });
+                });
+
+            }
+        })
+
+        /**
+         * 编辑、添加操作的弹出窗口---还未更改!
+         * @constructor
+         */
+        function OpenUpdateOrInsertMusicDialog() {
+            var title = "<h2>歌曲管理 - 添加歌曲</h2>";
+            var url = ctx+"/sale_chance/toSaleChancePage"
+
+            //判断营销机会的id是否为空 空字符串/null
+            if(saleChanceId != null && saleChanceId != ''){
+                //更新操作
+                title = "<h2>营销机会管理 - 更新营销机会</h2>";
+                //请求地址 传递营销机会的id
+                url += '?saleChanceId='+saleChanceId;
+            }
+            //iframe 层直接layer.open父窗口直接打开；layui.layer.open不是父窗口中打开
+            layui.layer.open({
+                //类型
+                type: 2,
+                //宽、高
+                area: ['500px', '620px'],
+                //url地址
+                content: url,
+                maxmin: true,//开启最大化最小化按钮
+            });
+        }
+        /**
+         * 监听头部工具栏事件--批量删除
+         * 格式：
+         *    以复选框事件为例
+         *    table.on('toolbar(数据表格的lay-filter)', function(obj){
+         *        console.log(obj)
+         *    });
+         *   触发事件
+         */
+        table.on('toolbar(currentTableFilter)', function(data){
+            console.log(data);
+
+            if(data.event == "add"){
+                //添加操作
+                OpenUpdateOrInsertMusicDialog();
+
+            } else if(data.event == "delete"){
+                //table.checkStatus();获取数据表格选中的行数据
+                // table.checkStatus("数据表格的id唯一标识");
+                var checkStatus = table.checkStatus("songManageSearch");
+                //删除操作
+                deleteMusic(checkStatus.data);
+            }
+        });
+
+        // 批量删除
+        function deleteMusic(data){
+            console.log(data);
+            //判断是否选中数据
+            if(data.length == 0){
+                layer.msg("请至少选中一条数据");
+                return;
+            }
+            //向用户确认删除行为
+            layer.confirm("您确定要删除选中的记录吗？",{
+                btn:["确认","取消"],
+            },function (index) {
+                //关闭弹出框
+                layer.close(index);
+
+                //拼接后台需要的id数组  ids=1&ids=2
+                var str = "ids=";
+                for(var i = 0; i < data.length; i++){
+                    //判断是否是倒数第二个
+                    if(i < data.length - 1){
+                        str += data[i].musicId + "&ids=";
+                    }else{
+                        str += data[i].musicId;
+                    }
+                }
+                console.log(str);
+                $.ajax({
+                    type:"post",
+                    url: ctx+"/musicManage/delBatch",
+                    data:str,
+                    dataType:"json",
+                    success:function(data){
+                        if(data.code == 200){
+                            //刷新数据表格
+                            tableIns.reload();
+                        }else{
+                            layer.msg(data.msg,{icon:5})
+                        }
+                    }
+                });
+            })
+        }
+    });
+</script>
+
+</body>
+</html>
