@@ -31,7 +31,7 @@ public class AlbumService extends BaseService<Album,Integer> {
         layerTableModel.setData(pageInfo.getList());
         return layerTableModel;
     }
-
+    @Transactional(propagation = Propagation.REQUIRED)
     public void deleteAlbum(Integer[] ids) {
         AssertUtil.isTrue(ids.length<1, "请选择要删除的数据");
         AssertUtil.isTrue(albumMapper.deleteBatch(ids)<1, "删除失败，系统出错");
