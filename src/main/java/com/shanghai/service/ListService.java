@@ -33,9 +33,7 @@ public class ListService extends BaseService<List,Integer> {
         PageHelper.startPage(query.getPage(), query.getLimit());
         java.util.List<ListQuery> listQueries = listMapper.selectByParams(query);
         for(ListQuery listQuery:listQueries){
-            String musicName = (listMapper.queryListHasMusicByListId(listQuery.getListId())).toString();
-            musicName = musicName.substring(1,musicName.length()-1);
-            listQuery.setMusicName(musicName);
+            setMusicNameForListQuery(listQuery);
         }
         PageInfo<ListQuery> pageInfo =
                 new PageInfo<ListQuery>(listQueries);
@@ -44,7 +42,16 @@ public class ListService extends BaseService<List,Integer> {
         map.put("count", pageInfo.getTotal());
         map.put("data", pageInfo.getList());
         return map;
+    }
 
+    /**
+     * 给歌单模型添加歌曲列表属性
+     * @param listQuery
+     */
+    public void setMusicNameForListQuery(ListQuery listQuery){
+        String musicName = (listMapper.queryListHasMusicByListId(listQuery.getListId())).toString();
+        musicName = musicName.substring(1,musicName.length()-1);
+        listQuery.setMusicName(musicName);
     }
 
     /**

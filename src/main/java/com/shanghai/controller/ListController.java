@@ -56,7 +56,9 @@ public class ListController extends BaseController {
         if(null!=listId){
             ListQuery listQuery = listService.selectByListId(listId);
             AssertUtil.isTrue(null==listQuery,"数据异常，请重试");
+            listService.setMusicNameForListQuery(listQuery);
             request.setAttribute("listQuery",listQuery);
+            System.out.println(listQuery.getMusicName());
         }
         return "/list/list_add_update";
     }
