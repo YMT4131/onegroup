@@ -16,6 +16,15 @@ import javax.annotation.Resource;
 public class MusicController extends BaseController {
     @Resource
     private MusicService musicService;
+
+    /**
+     * 进入歌曲管理界面
+     * @return
+     */
+    @RequestMapping("toSongManagePage")
+    public String toSongManagePage(){
+        return "musicManager/songManage";
+    }
     /**
      * 搜索按钮绑定-多条件查询
      * @param musicQuery
@@ -38,7 +47,6 @@ public class MusicController extends BaseController {
         musicService.deleteOneMusic(musicId);
         return success("删除成功!");
     }
-
     /**
      * 头部工具栏绑定
      *      批量删除

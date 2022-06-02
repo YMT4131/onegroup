@@ -33,8 +33,10 @@
       #{typeId3,jdbcType=INTEGER}, #{isForVip,jdbcType=INTEGER}, #{isValid,jdbcType=INTEGER}
       )
   </insert>
+  <!--添加操作：头部工具栏-->
   <insert id="insertSelective" parameterType="com.shanghai.po.Music" >
-    insert into music
+    insert into
+        music
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="musicId != null" >
         music_id,
@@ -94,6 +96,7 @@
       </if>
     </trim>
   </insert>
+
   <!--行工具栏-单条记录的编辑-->
   <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Music" >
     update music

@@ -85,4 +85,20 @@ public class MusicService extends BaseService<Music,Integer> {
 
     }
 
+    /**
+     * 添加操作--头部工具栏添加按钮绑定
+     *  1.参数校验
+     *      musicName 非空数据存在
+     *
+     *
+     *
+     *  2.参数默认值
+     *
+     *  3.执行dao层方法，判断受影响行数
+     * @param music
+     */
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void addMusic(Music music){
+       musicMapper.insertSelective(music);
+    }
 }
