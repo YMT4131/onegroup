@@ -47,7 +47,7 @@
         },
         {
           "title": "用户管理",
-          "href": "page/table.html",
+          "href": "user/index",
           "icon": "fa fa-male",
           "target": "_self"
         },
