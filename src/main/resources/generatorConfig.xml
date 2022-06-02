@@ -64,7 +64,7 @@
 
 
 
-        <table tableName="list_has_music" domainObjectName="ListHasMusic"
+        <table tableName="type" domainObjectName="Type"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
