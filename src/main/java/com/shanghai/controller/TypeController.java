@@ -6,6 +6,7 @@ import com.shanghai.model.TypeModel;
 import com.shanghai.po.vo.Type;
 import com.shanghai.service.TypeService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -25,12 +26,6 @@ public class TypeController extends BaseController {
         return "type/music_type";
     }
 
-    @RequestMapping("addTypePage")
-    public String addTypePage(){
-
-        return "type/add_type";
-    }
-
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> queryType(TypeModel typeModel){
@@ -42,6 +37,12 @@ public class TypeController extends BaseController {
     public ResultInfo addType(Type type){
         typeService.addType(type);
         return success("添加成功");
+    }
+
+    @RequestMapping("addTypePage")
+    public String addTypePage(){
+
+        return "type/add_type";
     }
 
 }

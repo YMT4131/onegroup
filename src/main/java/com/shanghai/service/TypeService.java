@@ -48,10 +48,21 @@ public class TypeService extends BaseService<Type,Integer> {
         AssertUtil.isTrue(typeMapper.insertSelective(type)<1,"添加音乐类型失败");
     }
 
+    //修改数据
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updateType(Type type){
+        //参数校验
+        checkAddType(type.getTypeName(),type.getTypeInfo());
+        //校验修改名称唯一
+        Type type1 = typeMapper.queryTypeByName(type.getTypeName());
+        AssertUtil.isTrue(type1!=null && !type1.getTypeId().equals(type.getTypeId()),"名称已存在");
+    }
+
     //名称，简介
     private void checkAddType(String typeName, String typeInfo) {
         AssertUtil.isTrue(StringUtils.isBlank(typeName),"类型名称不能为空");
         AssertUtil.isTrue(StringUtils.isBlank(typeInfo),"简介不能为空");
 
     }
+
 }

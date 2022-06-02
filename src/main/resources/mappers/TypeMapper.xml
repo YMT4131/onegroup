@@ -99,4 +99,6 @@
     select <include refid="Base_Column_List" /> from type
 where type_name=#{typeName}
   </select>
+<!--  修改数据-->
+
 </mapper>

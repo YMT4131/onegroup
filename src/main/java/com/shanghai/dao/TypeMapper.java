@@ -11,5 +11,9 @@ public interface TypeMapper extends BaseMapper<Type,Integer> {
 
     List<TypeModel> queryType(TypeModel type);
 
+    //根据名称查找数据
     Type queryTypeByName(String typeName);
+
+    //修改
+//    Type updateTypeById(Integer id);
 }

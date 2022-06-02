@@ -41,22 +41,6 @@
             layer = layui.layer,
             $ = layui.$;
 
-        //监听提交
-        // form.on('submit(saveBtn)', function (data) {
-        //     var index = layer.alert(JSON.stringify(data.field), {
-        //         title: '最终的提交信息'
-        //     }, function () {
-        //
-        //         // 关闭弹出层
-        //         layer.close(index);
-        //
-        //         var iframeIndex = parent.layer.getFrameIndex(window.name);
-        //         parent.layer.close(iframeIndex);
-        //
-        //     });
-        //
-        //     return false;
-        // });
 
         form.on("submit(saveBtn)",function (data){
             var index=layer.msg("数据提交中，请稍等。。。",{
@@ -66,10 +50,10 @@
             });
             var url=ctx+"/type/add";
 
-            // 判断隐藏域中的ID是否为空，如果不为空则为修改操作
-            // if ($("input[name='id']").val()) {
-            //     url = ctx + "/sale_chance/update";
-            // }
+           // 判断隐藏域中的ID是否为空，如果不为空则为修改操作
+            if ($("input[name='id']").val()) {
+                url = ctx + "/sale_chance/update";
+            }
 
             $.post(url,data.field,function (result){
                 if(result.code==200){
