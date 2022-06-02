@@ -26,5 +26,6 @@ layui.config({
     echarts: 'echarts/echarts', // echarts图表扩展
     echartsTheme: 'echarts/echartsTheme', // echarts图表主题扩展
     wangEditor: 'wangEditor/wangEditor', // wangEditor富文本扩展
+    jquery_cookie:'jquery-cookie/jquery.cookie',
     layarea: 'layarea/layarea', //  省市县区三级联动下拉选择器
 });

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanghai.dao.AlbumMapper">
+  <resultMap id="BaseResultMap" type="com.shanghai.po.Album">
+    <id column="album_id" jdbcType="INTEGER" property="albumId" />
+    <result column="album_name" jdbcType="VARCHAR" property="albumName" />
+    <result column="album_release_date" jdbcType="DATE" property="albumReleaseDate" />
+    <result column="singer_id" jdbcType="INTEGER" property="singerId" />
+    <result column="album_price" jdbcType="DECIMAL" property="albumPrice" />
+    <result column="is_valid" jdbcType="INTEGER" property="isValid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    album_id, album_name, album_release_date, singer_id, album_price, is_valid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from album
+    where album_id = #{albumId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from album
+    where album_id = #{albumId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.shanghai.po.Album">
+    insert into album (album_id, album_name, album_release_date, 
+      singer_id, album_price, is_valid
+      )
+    values (#{albumId,jdbcType=INTEGER}, #{albumName,jdbcType=VARCHAR}, #{albumReleaseDate,jdbcType=DATE}, 
+      #{singerId,jdbcType=INTEGER}, #{albumPrice,jdbcType=DECIMAL}, #{isValid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.shanghai.po.Album">
+    insert into album
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="albumId != null">
+        album_id,
+      </if>
+      <if test="albumName != null">
+        album_name,
+      </if>
+      <if test="albumReleaseDate != null">
+        album_release_date,
+      </if>
+      <if test="singerId != null">
+        singer_id,
+      </if>
+      <if test="albumPrice != null">
+        album_price,
+      </if>
+      <if test="isValid != null">
+        is_valid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="albumId != null">
+        #{albumId,jdbcType=INTEGER},
+      </if>
+      <if test="albumName != null">
+        #{albumName,jdbcType=VARCHAR},
+      </if>
+      <if test="albumReleaseDate != null">
+        #{albumReleaseDate,jdbcType=DATE},
+      </if>
+      <if test="singerId != null">
+        #{singerId,jdbcType=INTEGER},
+      </if>
+      <if test="albumPrice != null">
+        #{albumPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="isValid != null">
+        #{isValid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Album">
+    update album
+    <set>
+      <if test="albumName != null">
+        album_name = #{albumName,jdbcType=VARCHAR},
+      </if>
+      <if test="albumReleaseDate != null">
+        album_release_date = #{albumReleaseDate,jdbcType=DATE},
+      </if>
+      <if test="singerId != null">
+        singer_id = #{singerId,jdbcType=INTEGER},
+      </if>
+      <if test="albumPrice != null">
+        album_price = #{albumPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="isValid != null">
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where album_id = #{albumId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shanghai.po.Album">
+    update album
+    set album_name = #{albumName,jdbcType=VARCHAR},
+      album_release_date = #{albumReleaseDate,jdbcType=DATE},
+      singer_id = #{singerId,jdbcType=INTEGER},
+      album_price = #{albumPrice,jdbcType=DECIMAL},
+      is_valid = #{isValid,jdbcType=INTEGER}
+    where album_id = #{albumId,jdbcType=INTEGER}
+  </update>
+  <select id="queryAlbumList" parameterType="albumModel" resultType="albumModel">
+    select a.*,s.singer_name singer
+    from album a LEFT JOIN singer s on s.singer_id=a.singer_id
+    <where>
+      a.is_valid=1
+      <if test="albumName != null">
+        and a.album_name like CONCAT('%',#{albumName},'%')
+      </if>
+      <if test="singer != null">
+        and s.singer_name like CONCAT('%',#{singer},'%')
+      </if>
+      <if test="lowPrice != null">
+        and a.album_price &gt; #{lowPrice}
+      </if>
+      <if test="higPrice != null">
+        and a.album_price &lt; #{higPrice}
+      </if>
+    </where>
+  </select>
+  <update id="deleteBatch">
+    update album set is_valid=0 where album_id in
+    <foreach collection="array" open="(" separator="," close=")" item="id">
+      #{id}
+    </foreach>
+  </update>
+  <select id="querySingerList" parameterType="string" resultType="map">
+    select singer_id id,singer_name name from singer
+    <where>
+        is_valid=1
+     <if test="singerName != null">
+       and singer_name like concat('%',#{singerName},'%')
+     </if>
+    </where>
+  </select>
+  <select id="queryAlbumByName" parameterType="string" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"></include>
+    from album where is_valid=1 and album_name=#{albumName}
+  </select>
+  <select id="queryAlbumModelById" parameterType="integer" resultType="albumModel">
+    select a.*,s.singer_name singer
+    from album a LEFT JOIN singer s on s.singer_id=a.singer_id
+    where a.is_valid=1 and a.album_id=#{albumId}
+  </select>
+</mapper>
