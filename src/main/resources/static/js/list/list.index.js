@@ -85,9 +85,10 @@ layui.use(['form', 'table'], function () {
     }
 
     //监听表格复选框选择
-    table.on('checkbox(currentTableFilter)', function (obj) {
+    table.on('radio(#TypeName)', function (obj) {
     console.log(obj)
-});
+
+    });
 
     //监听行工具栏
     table.on('tool(currentTableFilter)', function (obj) {
