@@ -49,15 +49,11 @@ layui.use(['form', 'table'], function () {
      * toolbar头部工具栏监听事件
      */
     table.on('toolbar(currentTableFilter)', function (obj) {
+        var checkStatus = table.checkStatus(obj.config.id);
         if (obj.event === 'add') {  // 监听添加操作
             toAddOrUpdate();
-            $(window).on("resize", function () {
-                layer.full(index);
-            });
         } else if (obj.event === 'delete') {  // 监听删除操作
-            var checkStatus = table.checkStatus('currentTableId'),
-                data = checkStatus.data;
-            layer.alert(JSON.stringify(data));
+            deleteData(checkStatus.data,1);
         }
     });
 
@@ -66,36 +62,23 @@ layui.use(['form', 'table'], function () {
      * 行工具栏监听
      */
     table.on('tool(currentTableFilter)', function (obj) {
-        var data = obj.data;
+        var data = obj.data; //获取当前行的数据
         if (obj.event === 'edit') {
-
-
-            $(window).on("resize", function () {
-                layer.full(index);
-            });
-            return false;
-        } else if (obj.event === 'delete') {
-            layer.confirm('真的删除行么', function (index) {
-                obj.del();
-                layer.close(index);
-            });
+            toAddOrUpdate(data.albumId);
+        } else if (obj.event === 'delete') { //删除操作
+            deleteData(data,2);
         }
     });
-
-
-    //监听表格复选框选择
-    table.on('checkbox(currentTableFilter)', function (obj) {
-        console.log(obj)
-    });
-
     //打开新增或修改页面
     function toAddOrUpdate(albumId){
         var url = ctx+'/album/toAddOrUpdate';
+        var tit = "添加专辑";
         if(albumId){
-            url = url +"&albumId="+albumId;
+            url = url +"?albumId="+albumId;
+            tit = "修改专辑";
         }
         var index = layer.open({
-            title: '添加专辑',
+            title: tit,
             type: 2,
             shade: 0.2,
             maxmin:true,
@@ -105,8 +88,51 @@ layui.use(['form', 'table'], function () {
         });
     }
     //删除操作
-    function deleteData(){
+    function deleteData(data,flag){
+        if(data.length == 0){
+            layer.msg("请选择需要删除的数据");
+            return;
+        }
+        layer.confirm("确定要删除这些数据吗？",{btn:['确定','取消']},function (index){
+            //关闭确认框
+            layer.close(index);
+            var ids = new Array(); //创建存放id的数组
+            if(flag == 1){ //头部工具栏
+                for(var i=0;i<data.length;i++){
+                    ids.push(data[i].albumId);
+                }
+            }else{ //行工具栏
+                ids.push(data.albumId);
+            }
 
+            //请求后台
+            $.ajax({
+                type:"post",
+                url:ctx+"/album/deleteAlbum",
+                data:JSON.stringify(ids),
+                contentType:"application/json;charset=utf-8",
+                dataType:"json",
+                success:function (result){
+                    if(result.code == '200'){
+                        layer.msg("删除成功");
+                        //重载列表
+                        table.reload('currentTableId', {
+                            where: { //设定异步数据接口的额外参数，任意设
+                                albumName:result.albumName,
+                                singer:result.singer,
+                                lowPrice:result.lowPrice,
+                                higPrice:result.higPrice
+                            }
+                            ,page: {
+                                curr: 1 // 重新从第 1 页开始
+                            }
+                        });
+                    }else{
+                        layer.msg(result.msg);
+                    }
+                }
+            })
+        })
     }
 
 });

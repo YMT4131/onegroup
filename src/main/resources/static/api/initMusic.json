@@ -41,13 +41,13 @@
         },
         {
           "title": "歌单管理",
-          "href": "page/table.html",
+          "href": "list/index",
           "icon": "fa fa-book",
           "target": "_self"
         },
         {
           "title": "用户管理",
-          "href": "page/table.html",
+          "href": "user/index",
           "icon": "fa fa-male",
           "target": "_self"
         },
