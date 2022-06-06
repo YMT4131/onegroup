@@ -17,13 +17,13 @@
       "child": [
         {
           "title": "歌曲管理",
-          "href": "page/table.html",
+          "href": "musicManage/toSongManagePage",
           "icon": "fa fa-headphones",
           "target": "_self"
         },
         {
           "title": "歌手管理",
-          "href": "page/table.html",
+          "href": "singer/index",
           "icon": "fa fa-smile-o",
           "target": "_self"
         },
@@ -47,7 +47,7 @@
         },
         {
           "title": "用户管理",
-          "href": "page/table.html",
+          "href": "user/index",
           "icon": "fa fa-male",
           "target": "_self"
         },

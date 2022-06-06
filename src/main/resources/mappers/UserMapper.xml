@@ -130,4 +130,23 @@
     select <include refid="Base_Column_List"></include>
     from user where is_valid=1 and user_name=#{userName}
   </select>
+
+  <select id="queryByParams" parameterType="com.shanghai.query.UserQuery" resultType="com.shanghai.model.UserModel">
+  select
+  user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP,
+  is_valid
+  from
+  user
+  <where>
+    <if test="userId != null and userId != ''">
+      and user_id = #{userId}
+    </if>
+    <if test="isVip != null and isVip != ''">
+      and is_VIP = #{isVip}
+    </if>
+    <if test="userName != null and userName != ''">
+      and user_name = #{userName}
+    </if>
+  </where>
+  </select>
 </mapper>

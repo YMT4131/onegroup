@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration
-        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
-        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        <!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
 
-    <!--
-        数据库驱动
-            在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path
-    -->
-    <classPathEntry  location="C:\Users\Finalost\.m2\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
+    <!-- 数据库驱动路径：在左侧project边栏的External Libraries中找到mysql的驱动，右键选择copy path -->
+    <classPathEntry
+            location="D:\maven1\repository\mysql\mysql-connector-java\8.0.18\mysql-connector-java-8.0.18.jar"/>
 
+    <!-- context 是逆向工程的主要配置信息，id：起个名字，targetRuntime：设置生成的文件适用于哪个mybatis版本 -->
     <context id="DB2Tables" targetRuntime="MyBatis3">
 
+        <!--optional,指在创建class时，对注释进行控制-->
         <commentGenerator>
             <!-- 是否去除日期那行注释 -->
             <property name="suppressDate" value="true"/>
@@ -23,7 +23,7 @@
         <!-- 数据库链接地址账号密码 -->
         <jdbcConnection
                 driverClass="com.mysql.cj.jdbc.Driver"
-                connectionURL="jdbc:mysql://127.0.0.1:3306/musicapp?serverTimezone=GMT%2B8"
+                connectionURL="jdbc:mysql://127.0.0.1:3306/onegroup?serverTimezone=GMT%2B8"
                 userId="root"
                 password="root">
             <property name="nullCatalogMeansCurrent" value="true"/>
@@ -43,8 +43,8 @@
 
 
         <!-- 生成Model类存放位置 -->
-        <javaModelGenerator targetPackage="com.shanghai.vo" targetProject="src/main/java">
-            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，最终生成的类放在这个package下，默认为false -->
+        <javaModelGenerator targetPackage="com.shanghai.po" targetProject="src/main/java">
+            <!-- 在targetPackage的基础上，根据数据库的schema再生成一层package，生成的类放在这个package下，默认为false -->
             <property name="enableSubPackages" value="true"/>
             <!-- 设置是否在getter方法中，对String类型字段调用trim()方法 -->
             <property name="trimStrings" value="true"/>
@@ -63,11 +63,10 @@
         </javaClientGenerator>
 
 
-
-        <table tableName="list_has_music" domainObjectName="ListHasMusic"
+        <!--数据库的表名与对应的实体类的名称，tableName是数据库中的表名，domainObjectName是生成的JAVA模型名-->
+        <table tableName="music" domainObjectName="Music"
                enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
     </context>
 </generatorConfiguration>
-
