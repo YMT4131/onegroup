@@ -23,7 +23,7 @@
         },
         {
           "title": "歌手管理",
-          "href": "page/table.html",
+          "href": "singer/index",
           "icon": "fa fa-smile-o",
           "target": "_self"
         },
