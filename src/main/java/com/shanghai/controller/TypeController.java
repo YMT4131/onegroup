@@ -29,6 +29,7 @@ public class TypeController extends BaseController {
     @RequestMapping("list")
     @ResponseBody
     public Map<String, Object> queryType(TypeModel typeModel){
+
         return typeService.queryType(typeModel);
     }
 
@@ -40,9 +41,27 @@ public class TypeController extends BaseController {
     }
 
     @RequestMapping("addTypePage")
-    public String addTypePage(){
-
+    public String addTypePage(Integer id,Model model){
+        if(id!=null){
+            Type type = typeService.selectByPrimaryKey(id);
+            model.addAttribute("type",type);
+        }
         return "type/add_type";
+    }
+
+    @RequestMapping("update")
+    @ResponseBody
+    public ResultInfo updateType(Type type){
+        typeService.updateType(type);
+        return success("修改成功");
+    }
+
+    //批量删除
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo deleteType(Integer[] ids) {
+        typeService.deleteType(ids);
+        return success("音乐类型删除成功！");
     }
 
 }
