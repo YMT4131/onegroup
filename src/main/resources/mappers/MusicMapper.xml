@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.shanghai.dao.MusicMapper" >
-  <resultMap id="BaseResultMap" type="com.shanghai.vo.Music" >
+  <resultMap id="BaseResultMap" type="com.shanghai.po.Music" >
     <id column="music_id" property="musicId" jdbcType="INTEGER" />
     <result column="music_name" property="musicName" jdbcType="VARCHAR" />
     <result column="singer_id" property="singerId" jdbcType="INTEGER" />
@@ -22,11 +22,8 @@
     from music
     where music_id = #{musicId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from music
-    where music_id = #{musicId,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.shanghai.vo.Music" >
+
+  <insert id="insert" parameterType="com.shanghai.po.Music" >
     insert into music (music_id, music_name, singer_id, 
       album_id, type_id_1, type_id_2, 
       type_id_3, is_for_VIP, is_valid
@@ -36,8 +33,10 @@
       #{typeId3,jdbcType=INTEGER}, #{isForVip,jdbcType=INTEGER}, #{isValid,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.shanghai.vo.Music" >
-    insert into music
+  <!--添加操作：头部工具栏-->
+  <insert id="insertSelective" parameterType="com.shanghai.po.Music" >
+    insert into
+        music
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="musicId != null" >
         music_id,
@@ -97,7 +96,9 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.vo.Music" >
+
+  <!--行工具栏-单条记录的编辑-->
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Music" >
     update music
     <set >
       <if test="musicName != null" >
@@ -127,7 +128,7 @@
     </set>
     where music_id = #{musicId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.shanghai.vo.Music" >
+  <update id="updateByPrimaryKey" parameterType="com.shanghai.po.Music" >
     update music
     set music_name = #{musicName,jdbcType=VARCHAR},
       singer_id = #{singerId,jdbcType=INTEGER},
@@ -139,4 +140,69 @@
       is_valid = #{isValid,jdbcType=INTEGER}
     where music_id = #{musicId,jdbcType=INTEGER}
   </update>
+  <!--
+    搜索按钮绑定
+      多条件查询
+  -->
+  <select id="searchMusic" resultType="com.shanghai.model.MusicModel"
+          parameterType="com.shanghai.query.MusicQuery">
+    select
+        music_id,m.singer_id,m.album_id,type_id_1,type_id_2,
+        type_id_3,is_for_VIP,music_name,
+        s.singer_name as singerName,
+        a.album_name as albumName
+    from
+        music m
+    left join
+        singer s
+    on
+        m.singer_id = s.singer_id
+    left join
+        album a
+    on
+        m.album_id = a.album_id
+    <where>
+      m.is_valid = 1
+      <if test="musicName != null and musicName != ''">
+        and music_name like concat('%',#{musicName},'%')
+      </if>
+      <if test="singerName != null and singerName != ''">
+        and s.singer_name like concat('%',#{singerName},'%')
+      </if>
+      <if test="albumName != null and albumName != ''">
+        and a.album_name like concat('%',#{albumName},'%')
+      </if>
+    </where>
+  </select>
+
+  <!--
+      删除操作
+        实际为更改isValid值为0
+          0：代表删除
+          1：代表存在状态
+    -->
+  <update id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    update
+      music
+    set
+      is_valid = 0
+    where
+      music_id = #{id}
+  </update>
+
+  <!--批量删除 本质为更改isValid的值 头部工具栏-->
+  <update id="deleteBatch">
+    update
+      music
+    set
+      is_valid = 0
+    where
+      music_id
+    in
+    <foreach collection="array" separator="," open="(" close=")" item="musicId">
+      #{musicId}
+    </foreach>
+  </update>
+
+
 </mapper>

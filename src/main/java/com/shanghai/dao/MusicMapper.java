@@ -1,17 +1,13 @@
 package com.shanghai.dao;
 
-import com.shanghai.vo.Music;
+import com.shanghai.base.BaseMapper;
+import com.shanghai.model.MusicModel;
+import com.shanghai.po.Music;
+import com.shanghai.query.MusicQuery;
 
-public interface MusicMapper {
-    int deleteByPrimaryKey(Integer musicId);
+import java.util.List;
 
-    int insert(Music record);
+public interface MusicMapper extends BaseMapper<Music,Integer> {
 
-    int insertSelective(Music record);
-
-    Music selectByPrimaryKey(Integer musicId);
-
-    int updateByPrimaryKeySelective(Music record);
-
-    int updateByPrimaryKey(Music record);
+    List<MusicModel> searchMusic(MusicQuery musicQuery);
 }
