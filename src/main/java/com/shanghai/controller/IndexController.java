@@ -2,7 +2,6 @@ package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
-import com.shanghai.po.User;
 import com.shanghai.po.vo.UserModel;
 import com.shanghai.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
