@@ -53,7 +53,7 @@
         },
         {
           "title": "角色管理",
-          "href": "page/table.html",
+          "href": "role/index",
           "icon": "fa fa-group",
           "target": "_self"
         }
