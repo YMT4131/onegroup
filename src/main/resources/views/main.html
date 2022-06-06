@@ -23,7 +23,7 @@
                             <a href="javascript:;" layuimini-content-href="page/user-setting.html" data-title="基本资料" data-icon="fa fa-gears">基本资料<span class="layui-badge-dot"></span></a>
                         </dd>
                         <dd>
-                            <a href="javascript:;" layuimini-content-href="page/user-password.html" data-title="修改密码" data-icon="fa fa-gears">修改密码</a>
+                            <a href="javascript:;" layuimini-content-href="toUpdatePasswordPage" data-title="修改密码" data-icon="fa fa-gears">修改密码</a>
                         </dd>
                         <dd>
                             <hr>
@@ -83,14 +83,16 @@
 
 <script>
 
-    layui.use(['jquery', 'layer', 'miniAdmin','miniTongji'], function () {
+    layui.use(['jquery', 'layer', 'miniAdmin','miniTongji','jquery','jquery_cookie'], function () {
         var $ = layui.jquery,
             layer = layui.layer,
             miniAdmin = layui.miniAdmin,
-            miniTongji = layui.miniTongji;
+            miniTongji = layui.miniTongji,
+            $ = layui.jquery,
+            $ = layui.jquery_cookie($);
 
         var options = {
-            iniUrl: "api/initMusic.json",    // 初始化接口
+            iniUrl: ctx+"/initMenu",    // 初始化接口 api/initMusic.json
             clearUrl: "api/clear.json", // 缓存清理接口
             urlHashLocation: true,      // 是否打开hash定位
             bgColorDefault: false,      // 主题默认配置
@@ -111,11 +113,13 @@
                 'layuimini-onepage.99php.cn',
             ],
         });
-
+        //退出登录
         $('.login-out').on("click", function () {
-            layer.msg('退出登录成功', function () {
-                window.location = 'login-3.html';
-            });
+            //清除cookie中的数据
+            $.removeCookie("userIdStr", {domain:"localhost",path:"/onegroup"});
+            $.removeCookie("userName", {domain:"localhost",path:"/onegroup"});
+            //跳转回登录页面
+            window.location.href=ctx+"/login";
         });
     });
 </script>

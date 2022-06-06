@@ -3,12 +3,18 @@ package com.shanghai.controller;
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
 import com.shanghai.po.vo.UserModel;
+import com.shanghai.po.vo.UserPasswordModel;
+import com.shanghai.service.IndexService;
 import com.shanghai.service.UserService;
+import com.shanghai.utils.LoginUserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * 公有功能实现
@@ -18,6 +24,8 @@ public class IndexController extends BaseController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private IndexService indexService;
 
     //访问模板首页
     @RequestMapping("indexModel")
@@ -53,6 +61,37 @@ public class IndexController extends BaseController {
     }
 
     /**
+     * 跳转到基本信息页面
+     * @param request
+     * @return
+     */
+    @RequestMapping("toLoginUserInfoPage")
+    public String toLoginUserInfoPage(HttpServletRequest request){
+        //获取当前用户的id
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        return "";
+    }
+
+    /**
+     * 跳转到密码修改页面
+     * @return
+     */
+    @RequestMapping("toUpdatePasswordPage")
+    public String toUpdatePasswordPage(){
+        return "updatePassword";
+    }
+    @RequestMapping("updatePassword")
+    @ResponseBody
+    public ResultInfo updatePassword(@RequestBody UserPasswordModel model,HttpServletRequest request){
+        //获取当前用户id
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        model.setUserId(userId);
+        userService.updatePassword(model);
+        return new ResultInfo();
+
+    }
+
+    /**
      * 登录操作
      * @param userModel
      * @return
@@ -61,6 +100,19 @@ public class IndexController extends BaseController {
     @ResponseBody
     public ResultInfo loginAction(@RequestBody UserModel userModel){
         return userService.login(userModel);
+    }
+
+    /**
+     * 菜单初始化
+     * @param request
+     * @return
+     */
+    @RequestMapping("initMenu")
+    @ResponseBody
+    public Map<String,Object> initMenu(HttpServletRequest request){
+        //获取当前用户id
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        return indexService.initMenu(userId);
     }
 
 
