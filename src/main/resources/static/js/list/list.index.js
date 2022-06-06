@@ -20,6 +20,7 @@ layui.use(['form', 'table'], function () {
         {field: 'listId', title: '歌单序号',sort: true},
         {field: 'listName', title: '歌单名称', sort: true},
         {field: 'listInfo', title: '歌单介绍'},
+        {field: 'musicName', title: '歌曲列表'},
         {field: 'typeName', title: '音乐类型', sort: true},
         {title: '操作', minWidth: 150, toolbar: '#currentTableBar', align: "center"}
     ]],
@@ -85,9 +86,10 @@ layui.use(['form', 'table'], function () {
     }
 
     //监听表格复选框选择
-    table.on('checkbox(currentTableFilter)', function (obj) {
+    table.on('radio(#TypeName)', function (obj) {
     console.log(obj)
-});
+
+    });
 
     //监听行工具栏
     table.on('tool(currentTableFilter)', function (obj) {

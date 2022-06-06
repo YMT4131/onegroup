@@ -3,6 +3,7 @@ package com.shanghai.exceptions;
 import com.alibaba.fastjson.JSON;
 import com.shanghai.base.ResultInfo;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerExceptionResolver;

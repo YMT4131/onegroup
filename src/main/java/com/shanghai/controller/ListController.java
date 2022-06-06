@@ -1,18 +1,21 @@
 package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
+import com.shanghai.base.LayerTableModel;
 import com.shanghai.base.ResultInfo;
 import com.shanghai.query.ListQuery;
 import com.shanghai.service.ListService;
 import com.shanghai.utils.AssertUtil;
-import com.shanghai.vo.List;
+import com.shanghai.vo.Type;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -38,7 +41,7 @@ public class ListController extends BaseController {
 
     @RequestMapping("query")
     @ResponseBody
-    public Map<String,Object> selectByListName(ListQuery listQuery){
+    public Map<String,Object> selectByParams(ListQuery listQuery){
         return listService.selectByParams(listQuery);
     }
 
@@ -51,9 +54,10 @@ public class ListController extends BaseController {
     @RequestMapping("toAddOrUpdate")
     public String toAddOrUpdate(Integer listId, HttpServletRequest request){
         if(null!=listId){
-            List list = listService.selectByPrimaryKey(listId);
-            AssertUtil.isTrue(null==list,"数据异常，请重试");
-            request.setAttribute("list",list);
+            ListQuery listQuery = listService.selectByListId(listId);
+            AssertUtil.isTrue(null==listQuery,"数据异常，请重试");
+            listService.setMusicNameForListQuery(listQuery);
+            request.setAttribute("listQuery",listQuery);
         }
         return "/list/list_add_update";
     }
@@ -65,11 +69,10 @@ public class ListController extends BaseController {
      */
     @RequestMapping("save")
     @ResponseBody
-    public ResultInfo saveList(ListQuery listQuery){
-        listService.saveList(listQuery);
+    public ResultInfo saveList(ListQuery listQuery,Integer[] musicId){
+        listService.saveList(listQuery,musicId);
         return success("歌单添加成功");
     }
-
 
     /**
      * 添加歌单
@@ -78,23 +81,29 @@ public class ListController extends BaseController {
      */
     @RequestMapping("update")
     @ResponseBody
-    public ResultInfo updateList(ListQuery listQuery){
-        listService.updateList(listQuery);
+    public ResultInfo updateList(ListQuery listQuery,Integer[] musicId){
+        listService.updateList(listQuery,musicId);
         return success("歌单更新成功");
     }
 
-//    @RequestMapping("queryAllTypes")
-//    @ResponseBody
-//    public List<Type> queryAllTypes(){
-//        return listService.queryAllTypes();
-//    }
+    @RequestMapping("queryAllTypes")
+    @ResponseBody
+    public LayerTableModel queryAllTypes(){
+        return listService.queryAllTypes();
+    }
 
     @RequestMapping("delete")
     @ResponseBody
     public ResultInfo deleteList(Integer[] listIds){
-        AssertUtil.isTrue(null==listIds || listIds.length == 0,"请选择待删除的营销机会记录");
+        AssertUtil.isTrue(null==listIds || listIds.length == 0,"请选择待删除的歌单");
         listService.deleteBatches(listIds);
         return success("歌单删除成功");
+    }
+
+    @RequestMapping("queryAllMusicByListId")
+    @ResponseBody
+    public LayerTableModel queryAllMusicByListId(Integer listId){
+        return listService.queryAllMusicByListId(listId);
     }
 
 }
