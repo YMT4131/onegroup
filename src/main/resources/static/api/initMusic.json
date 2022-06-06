@@ -1,7 +1,7 @@
 {
   "homeInfo": {
     "title": "首页",
-    "href": "welcome"
+    "href": "welcome/index"
   },
   "logoInfo": {
     "title": "音乐平台",

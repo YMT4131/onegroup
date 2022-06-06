@@ -28,8 +28,8 @@
                                 <h5>歌曲统计</h5>
                             </div>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
+                                <h1 class="no-margins">${(welcome.musicNumber)!}</h1>
+<!--                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> ${(welcome.musicNumber)!}</div>-->
                                 <small>当前分类总记录数</small>
                             </div>
                         </div>
@@ -46,8 +46,8 @@
                                 <h5>歌手统计</h5>
                             </div>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
+                                <h1 class="no-margins">${(welcome.singerNumber)!}</h1>
+<!--                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> ${(welcome.singerNumber)!}</div>-->
                                 <small>当前分类总记录数</small>
                             </div>
                         </div>
@@ -64,8 +64,8 @@
                                 <h5>专辑统计</h5>
                             </div>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
+                                <h1 class="no-margins">${(welcome.albumNumber)!}</h1>
+<!--                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> ${(welcome.albumNumber)!}</div>-->
                                 <small>当前分类总记录数</small>
                             </div>
                         </div>
@@ -81,8 +81,8 @@
                                 <h5>歌单统计</h5>
                             </div>
                             <div class="panel-content">
-                                <h1 class="no-margins">1234</h1>
-                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> 1234</div>
+                                <h1 class="no-margins">${(welcome.listNumber)!}</h1>
+<!--                                <div class="stat-percent font-bold text-gray"><i class="fa fa-commenting"></i> ${(welcome.listNumber)!}</div>-->
                                 <small>当前分类总记录数</small>
                             </div>
                         </div>
@@ -180,5 +180,8 @@
         </div>
     </div>
 </div>
+<script>
+    $('body').append(location.search);
+</script>
 </body>
 </html>
