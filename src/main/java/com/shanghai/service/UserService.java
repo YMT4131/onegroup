@@ -87,7 +87,7 @@ public class UserService extends BaseService<User,Integer> {
         user.setUserPwd(Md5Util.encode(model.getNewPassword()));
         AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(user)<1, "密码修改失败");
     }
-}
+
 
 
     /*---------------------------------------------------------*/
