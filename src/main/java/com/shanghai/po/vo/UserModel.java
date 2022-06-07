@@ -1,6 +1,8 @@
 package com.shanghai.po.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.shanghai.base.BaseQuery;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -13,8 +15,12 @@ public class UserModel extends BaseQuery {
 
     private String userGender;
 
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date userBirthday;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date userJoinDate;
 
     private Integer isVip;
