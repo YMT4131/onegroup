@@ -133,21 +133,30 @@
     from user where is_valid=1 and user_name=#{userName}
   </select>
 
-  <select id="selectByParams" parameterType="com.shanghai.query.UserQuery" resultType="com.shanghai.po.User">
+  <select id="selectByParams" parameterType="com.shanghai.query.UserQuery" resultType="com.shanghai.po.vo.UserModel">
   select
-    <include refid="Base_Column_List" />
-  from
-    user
+    u.user_id as userId, u.user_name as userName, u.user_pwd as userPwd, u.user_gender as userGender,
+         u.user_birthday as userBirthday, u.user_join_date as userJoinDate,
+         u.is_VIP as isVIP,r.role_id as roleId,rr.role_name as roleName
+    from
+    user u
+    left join user_role r
+    on u.user_id = r.user_id
+    left join (
+        select * from role
+        where is_valid=1
+    ) rr
+    on r.role_id=rr.role_id
   <where>
-    is_valid = 1
+    u.is_valid = 1
     <if test="userId != null and userId != ''">
-      and user_id = #{userId}
+      and u.user_id = #{userId}
     </if>
     <if test="isVip != null and isVip != ''">
-      and is_VIP = #{isVip}
+      and u.is_VIP = #{isVip}
     </if>
     <if test="userName != null and userName != ''">
-      and user_name = #{userName}
+      and u.user_name = #{userName}
     </if>
   </where>
   </select>
@@ -165,4 +174,107 @@
           #{user_id}
         </foreach>
   </update>
+
+
+  <!-- 查询所有的角色列表 -->
+  <select id="queryAllRoles" resultType="java.util.Map">
+    select
+        role_id roleId, role_name roleName
+    from
+        role
+    where
+        is_valid = 1
+  </select>
+  <select id="selectUserByUserId" parameterType="com.shanghai.po.vo.UserModel" resultType="userModel">
+    select u.*,us.role_id
+    from user u
+        left join user_role us
+            on us.user_id=u.user_id
+    where u.is_valid=1 and u.user_id= #{userId}
+  </select>
+
+  <insert id="insertHasKey" useGeneratedKeys="true" keyProperty="userId" keyColumn="user_id" parameterType="com.shanghai.po.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="userPwd != null">
+        user_pwd,
+      </if>
+      <if test="userGender != null">
+        user_gender,
+      </if>
+      <if test="userBirthday != null">
+        user_birthday,
+      </if>
+      <if test="userJoinDate != null">
+        user_join_date,
+      </if>
+      <if test="isVip != null">
+        is_VIP,
+      </if>
+      <if test="isValid != null">
+        is_valid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userGender != null">
+        #{userGender,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userJoinDate != null">
+        #{userJoinDate,jdbcType=DATE},
+      </if>
+      <if test="isVip != null">
+        #{isVip,jdbcType=INTEGER},
+      </if>
+      <if test="isValid != null">
+        #{isValid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateByUserModel" parameterType="com.shanghai.po.vo.UserModel">
+    update user
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userPwd != null">
+        user_pwd = #{userPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="userGender != null">
+        user_gender = #{userGender,jdbcType=VARCHAR},
+      </if>
+      <if test="userBirthday != null">
+        user_birthday = #{userBirthday,jdbcType=DATE},
+      </if>
+      <if test="userJoinDate != null">
+        user_join_date = #{userJoinDate,jdbcType=DATE},
+      </if>
+      <if test="isVip != null">
+        is_VIP = #{isVip,jdbcType=INTEGER},
+      </if>
+      <if test="isValid != null">
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
 </mapper>
