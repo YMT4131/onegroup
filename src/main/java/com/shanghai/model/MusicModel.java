@@ -1,25 +1,12 @@
 package com.shanghai.model;
 
-public class MusicModel {
-    //歌手名、专辑名
+import com.shanghai.base.BaseQuery;
+
+public class MusicModel extends BaseQuery {
+    //歌手名、专辑名、歌曲类型
     private String singerName;
     private String albumName;
-
-    public String getSingerName() {
-        return singerName;
-    }
-
-    public void setSingerName(String singerName) {
-        this.singerName = singerName;
-    }
-
-    public String getAlbumName() {
-        return albumName;
-    }
-
-    public void setAlbumName(String albumName) {
-        this.albumName = albumName;
-    }
+    private String typeName;
 
     private Integer musicId;
 
@@ -38,6 +25,32 @@ public class MusicModel {
     private Integer isForVip;
 
     private Integer isValid;
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getSingerName() {
+        return singerName;
+    }
+
+    public void setSingerName(String singerName) {
+        this.singerName = singerName;
+    }
+
+    public String getAlbumName() {
+        return albumName;
+    }
+
+    public void setAlbumName(String albumName) {
+        this.albumName = albumName;
+    }
+
+
 
     public Integer getMusicId() {
         return musicId;

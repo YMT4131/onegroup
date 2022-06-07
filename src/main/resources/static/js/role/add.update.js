@@ -8,9 +8,12 @@ layui.use(['form', 'layer'], function () {
     form.on('submit(addOrUpdateRole)',function (data) {
         var index= top.layer.msg("数据提交中,请稍后...",{icon:16,time:false,shade:0.8});
         var url = ctx+"/role/add";
-        if($("input[name='roleId']").val()){
-            url=ctx+"/role/update";
+        var roleId = $("[name='id']").val();
+        if (roleId != null && roleId != ''){
+            url = ctx+"/role/updateRole"
         }
+
+
         $.post(url,data.field,function (res) {
             if(res.code==200){
                 top.layer.msg("操作成功");
@@ -24,5 +27,10 @@ layui.use(['form', 'layer'], function () {
         });
         return false;
     });
+
+    $("#closeBtn").click(function () {
+        var index = parent.layer.getFrameIndex(window.name);
+        parent.layer.close(index);
+    })
 
 });

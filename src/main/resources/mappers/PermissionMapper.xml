@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shanghai.dao.PermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.shanghai.po.Permission" >
+    <id column="permission_id" property="permissionId" jdbcType="INTEGER" />
+    <result column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="module_id" property="moduleId" jdbcType="INTEGER" />
+    <result column="opt_value" property="optValue" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    permission_id, role_id, module_id, opt_value, create_date, update_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from permission
+    where permission_id = #{permissionId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from permission
+    where permission_id = #{permissionId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.shanghai.po.Permission" >
+    insert into permission (permission_id, role_id, module_id, 
+      opt_value, create_date, update_date
+      )
+    values (#{permissionId,jdbcType=INTEGER}, #{roleId,jdbcType=INTEGER}, #{moduleId,jdbcType=INTEGER}, 
+      #{optValue,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.shanghai.po.Permission" >
+    insert into permission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="permissionId != null" >
+        permission_id,
+      </if>
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="moduleId != null" >
+        module_id,
+      </if>
+      <if test="optValue != null" >
+        opt_value,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="permissionId != null" >
+        #{permissionId,jdbcType=INTEGER},
+      </if>
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="moduleId != null" >
+        #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="optValue != null" >
+        #{optValue,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Permission" >
+    update permission
+    <set >
+      <if test="roleId != null" >
+        role_id = #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="moduleId != null" >
+        module_id = #{moduleId,jdbcType=INTEGER},
+      </if>
+      <if test="optValue != null" >
+        opt_value = #{optValue,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where permission_id = #{permissionId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.shanghai.po.Permission" >
+    update permission
+    set role_id = #{roleId,jdbcType=INTEGER},
+      module_id = #{moduleId,jdbcType=INTEGER},
+      opt_value = #{optValue,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP}
+    where permission_id = #{permissionId,jdbcType=INTEGER}
+  </update>
+  <select id="countPermissionByRoleId" parameterType="int" resultType="java.lang.Integer">
+    select
+        count(1)
+    from
+        permission
+    where
+        role_id=#{roleId}
+  </select>
+  <delete id="deleteByRoleId" parameterType="int">
+        delete from
+            permission
+        where
+            role_id=#(roleId)
+
+  </delete>
+  <!-- 批量添加-->
+  <insert id="insertBatch" >
+    insert into
+        permission (role_id,module_id,opt_value,create_date,update_date)
+    value 
+        <foreach collection="list" item="item" separator=",">
+          (#{item.roleId},#{item.moduleId},#{item.optValue},now(),now())
+        </foreach>
+
+  </insert>
+  <select id="queryRoleHasModuleIdByRoleId" parameterType="int" resultType="java.lang.Integer">
+    select
+        module_id
+    from
+        permission
+    where
+        role_id=#{roleId}
+  </select>
+</mapper>

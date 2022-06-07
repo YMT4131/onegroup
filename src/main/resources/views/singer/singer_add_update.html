@@ -12,25 +12,31 @@
 </head>
 <body>
 <div class="layui-form layuimini-form">
-  <input type="hidden" name="listId" id="listId" value="${(listQuery.listId)!}">
+  <input type="hidden" name="singerId" id="singerId" value="${(singer.singerId)!}">
   <div class="layui-form-item">
-    <label class="layui-form-label required">歌单名称</label>
+    <label class="layui-form-label required">歌手名称</label>
     <div class="layui-input-block">
-      <input type="text" name="listName" lay-verify="required" lay-reqtext="歌单名称不能为空"
-             placeholder="请输入歌单名称" value="${(list.listName)!}" class="layui-input">
+      <input type="text" name="singerName" lay-verify="required" lay-reqtext="歌手名称不能为空"
+             placeholder="请输入歌手名称" value="${(singer.singerName)!}" class="layui-input">
     </div>
   </div>
 
   <div class="layui-form-item">
-    <label class="layui-form-label required">歌单介绍</label>
+    <label class="layui-form-label required">歌手性别</label>
     <div class="layui-input-block">
-      <input type="text" name="listInfo" placeholder="请输入歌单介绍" value="${(list.listInfo)!}" class="layui-input">
+      <input type="text" name="singerGender" placeholder="请输入歌手性别" value="${(singer.singerGender)!}" class="layui-input">
     </div>
   </div>
   <div class="layui-form-item">
-    <label class="layui-form-label ">歌单类型</label>
+    <label class="layui-form-label ">歌手国籍</label>
     <div class="layui-input-block">
-      <input type="checkbox" name="typeId"  placeholder="请输入歌单类型" value="${(list.typeId)!}" class="layui-input">
+      <input type="text" name="singerNal"  placeholder="请输入歌手国籍" value="${(singer.singerNal)!}" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label ">歌手信息</label>
+    <div class="layui-input-block">
+      <input type="text" name="singerInfo"  placeholder="请输入歌手信息" value="${(singer.singerInfo)!}" class="layui-input">
     </div>
   </div>
 
