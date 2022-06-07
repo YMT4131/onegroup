@@ -49,12 +49,52 @@ layui.use(['form', 'table'], function () {
      */
     table.on('toolbar(currentTableFilter)', function (obj) {
         var checkStatus = table.checkStatus(obj.config.id);
-        if (obj.event === 'add') {  // 监听添加操作
+        if (obj.event == 'add') {  // 监听添加操作
             toAddOrUpdate();
-        } else if (obj.event === 'delete') {  // 监听删除操作
-            deleteData(checkStatus.data,1);
+        } else if (obj.event == 'delete') {  // 监听删除操作
+            deleteSingerList(checkStatus.data);
         }
     });
+    //批量删除 1.判断是否选中 2.询问用户是否删除 3.遍历选中的数据对象,得到对应的ID,拼接id参数 4.发送ajax请求
+    function deleteSingerList(dataList){
+        //判断是否选中
+        if (dataList.length < 1){
+            layer.msg("请选择要删除的记录",{icon:5});
+            return;
+        }
+        //询问是否确定删除
+        layer.confirm("确定要删除这些数据吗？",{btn:['确定','取消']},function (index){
+            //关闭确认框
+            layer.close(index);
+            //遍历选中记录,得到用户ID，拼接ID参数
+            var ids = "ids=";
+            for (var i = 0; i < dataList.length; i++){
+                var singer = dataList[i];
+                //判断是否最后一个元素
+                if(i < dataList.length - 1){
+                    ids = ids+ singer.singerId + '&ids=';
+                }else {
+                    ids = ids + singer.singerId;
+                }
+            }
+            console.log(ids);
+            //请求后台
+            $.ajax({
+                type:"post",
+                url:ctx+"/singer/delete",
+                data:ids,//参数是数组
+                success:function (result){
+                    if(result.code == '200'){
+                        layer.msg("删除成功",{icon:6});
+                        //重载列表
+                        tableIns.reload();
+                    }else{
+                        layer.msg(result.msg,{icon:5});
+                    }
+                }
+            })
+        })
+    }
 
 
     /**
@@ -63,10 +103,10 @@ layui.use(['form', 'table'], function () {
     table.on('tool(currentTableFilter)', function (obj) {
         console.log(obj);
         var data = obj.data; //获取当前行的数据
-        if (obj.event === 'edit') {
+        if (obj.event == 'edit') {
             toAddOrUpdate(data.singerId);
-        } else if (obj.event === 'delete') { //删除操作
-            deleteData(data,2);
+        } else if (obj.event == 'delete') { //删除操作
+            deleteData(data.singerId,2);
         }
     });
     //打开新增或修改页面
@@ -88,47 +128,29 @@ layui.use(['form', 'table'], function () {
         });
     }
     //删除操作
-    function deleteData(data,flag){
-        if(data.length == 0){
+    function deleteData(singerId,flag){
+        if(singerId.length == 0){
             layer.msg("请选择需要删除的数据");
             return;
         }
         layer.confirm("确定要删除这些数据吗？",{btn:['确定','取消']},function (index){
             //关闭确认框
+            console.log(singerId);
             layer.close(index);
-            var ids = new Array(); //创建存放id的数组
-            if(flag == 1){ //头部工具栏
-                for(var i=0;i<data.length;i++){
-                    ids.push(data[i].singerId);
-                }
-            }else{ //行工具栏
-                ids.push(data.singerId);
-            }
-
             //请求后台
             $.ajax({
                 type:"post",
-                url:ctx+"/singer/deleteSinger",
-                data:JSON.stringify(ids),
-                contentType:"application/json;charset=utf-8",
-                dataType:"json",
+                url:ctx+"/singer/delete",
+                data: {
+                    ids:singerId
+                },
                 success:function (result){
                     if(result.code == '200'){
-                        layer.msg("删除成功");
+                        layer.msg("删除成功",{icon:6});
                         //重载列表
-                        table.reload('currentTableId', {
-                            where: { //设定异步数据接口的额外参数，任意设
-                                albumName:result.albumName,
-                                singer:result.singer,
-                                lowPrice:result.lowPrice,
-                                higPrice:result.higPrice
-                            }
-                            ,page: {
-                                curr: 1 // 重新从第 1 页开始
-                            }
-                        });
+                        tableIns.reload();
                     }else{
-                        layer.msg(result.msg);
+                        layer.msg(result.msg,{icon:5});
                     }
                 }
             })
