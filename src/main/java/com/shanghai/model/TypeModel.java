@@ -1,6 +1,9 @@
 package com.shanghai.model;
 
-public class TypeModel {
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.shanghai.base.BaseQuery;
+
+public class TypeModel extends BaseQuery {
     private Integer typeId;
     private String typeName;
     private String typeInfo;
