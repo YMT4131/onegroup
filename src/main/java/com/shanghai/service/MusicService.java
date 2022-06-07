@@ -5,7 +5,6 @@ import com.github.pagehelper.PageInfo;
 import com.shanghai.base.BaseService;
 import com.shanghai.base.LayerTableModel;
 import com.shanghai.dao.MusicMapper;
-import com.shanghai.dao.TypeMapper;
 import com.shanghai.model.*;
 import com.shanghai.po.Music;
 import com.shanghai.query.MusicQuery;
@@ -20,8 +19,7 @@ import javax.annotation.Resource;
 public class MusicService extends BaseService<Music,Integer> {
     @Resource
     private MusicMapper musicMapper;
-    @Resource
-    private TypeMapper typeMapper;
+
 
     /**
      * 歌曲搜索-多条件查询
@@ -64,7 +62,7 @@ public class MusicService extends BaseService<Music,Integer> {
      *    --singerId 非空
      *    --albumId  非空
      *    --typeId1   非空
-     *    --isForVip  非空                  默认为0--非会员可听
+     *    --isForVip  非空
      *    2.默认参数
      *    --isValid   默认为1--有效
      *    3.调用dao层方法，判断受影响行数

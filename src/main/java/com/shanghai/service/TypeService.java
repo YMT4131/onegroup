@@ -40,12 +40,10 @@ public class TypeService extends BaseService<Type,Integer> {
     public void addType(Type type){
         //参数校验
         checkAddType(type.getTypeName(),type.getTypeInfo());
-        //待更新记录是否存在
-        Type type1 = typeMapper.selectByPrimaryKey(type.getTypeId());
-        AssertUtil.isTrue(type1==null,"待更新数据不存在");
+        //查询名称是否存在
+        Type type1 = typeMapper.queryTypeByName(type.getTypeName());
+        AssertUtil.isTrue(type1!=null && type1.getIsValid()==1,"名称已存在，重新输入");
 
-        //判断名称是否存在（不存在表示名称可用）
-        AssertUtil.isTrue(typeMapper.queryTypeByName(type.getTypeName())!=null,"重名，请重新输入");
         //设置默认值
         type.setIsValid(1);
         //执行
