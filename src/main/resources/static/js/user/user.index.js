@@ -20,6 +20,7 @@ layui.use(['form', 'table'], function () {
             {field: 'userGender', width: 80, title: '性别'},
             {field: 'userBirthday', title: '生日', width: 200},
             {field: 'userJoinDate', width: 200, title: '注册时间', sort: true},
+            {field: 'roleName', width: 200, title: '角色', sort: true},
             {title: '操作', minWidth: 80, toolbar: '#currentTableBar', align: "center"}
         ]],
         limits: [10, 15, 20, 25],

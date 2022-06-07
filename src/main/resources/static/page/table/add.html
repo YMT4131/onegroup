@@ -19,7 +19,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label required">用户名</label>
         <div class="layui-input-block">
-            <input type="text" name="username" lay-verify="required" lay-reqtext="用户名不能为空" placeholder="请输入用户名" value="" class="layui-input">
+            <input type="text" name="userName" lay-verify="required" lay-reqtext="用户名不能为空" placeholder="请输入用户名" value="" class="layui-input">
             <tip>填写自己管理账号的名称。</tip>
         </div>
     </div>
@@ -30,28 +30,28 @@
             <input type="radio" name="sex" value="女" title="女">
         </div>
     </div>
-    <div class="layui-form-item">
+    <!--<div class="layui-form-item">
         <label class="layui-form-label required">手机</label>
         <div class="layui-input-block">
             <input type="number" name="phone" lay-verify="required" lay-reqtext="手机不能为空" placeholder="请输入手机" value="" class="layui-input">
         </div>
-    </div>
-    <div class="layui-form-item">
+    </div>-->
+    <!--<div class="layui-form-item">
         <label class="layui-form-label">邮箱</label>
         <div class="layui-input-block">
             <input type="email" name="email" placeholder="请输入邮箱" value="" class="layui-input">
         </div>
-    </div>
+    </div>-->
     <div class="layui-form-item">
-        <label class="layui-form-label">职业</label>
+        <label class="layui-form-label">生日</label>
         <div class="layui-input-block">
-            <input type="text" name="work" placeholder="请输入职业" value="" class="layui-input">
+            <input type="text" name="userBirthday" placeholder="请输入生日" value="" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">备注信息</label>
+        <label class="layui-form-label">注册时间</label>
         <div class="layui-input-block">
-            <textarea name="remark" class="layui-textarea" placeholder="请输入备注信息"></textarea>
+            <textarea name="userJoinDate" class="layui-textarea" placeholder="请输入注册时间"></textarea>
         </div>
     </div>
 
@@ -61,8 +61,9 @@
         </div>
     </div>
 </div>
-<script src="../../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>
-<script>
+<!--<script src="../../lib/layui-v2.6.3/layui.js" charset="utf-8"></script>-->
+
+<!--<script>
     layui.use(['form'], function () {
         var form = layui.form,
             layer = layui.layer,
@@ -70,22 +71,41 @@
 
         //监听提交
         form.on('submit(saveBtn)', function (data) {
-            var index = layer.alert(JSON.stringify(data.field), {
-                title: '最终的提交信息'
-            }, function () {
-
-                // 关闭弹出层
-                layer.close(index);
-
-                var iframeIndex = parent.layer.getFrameIndex(window.name);
-                parent.layer.close(iframeIndex);
-
+            var index = layer.msg("数据提交中，请稍后...", {
+                icon: 16,
+                time: false,
+                shade: 0.8
             });
 
-            return false;
-        });
+            // 关闭弹出层
+            layer.close(index);
+            var iframeIndex = parent.layer.getFrameIndex(window.name);
+            parent.layer.close(iframeIndex);
 
+            //发送ajax请求
+            var url = ctx + "/user/add";    //添加操作
+            $.post(url, data.field, function (result) {
+                //判断操作是否成功，200 = 成功
+                if (result.code == 200) {
+                    //提示成功
+                    layer.msg("操作成功！", {icon: 6});
+                    //关闭加载层
+                    layer.close(index);
+                    //关闭弹出层
+                    layer.closeAll("iframe");
+                    //刷新父窗口，重新加载数据
+                    parent.location.reload();
+                } else {
+                    //失败
+                    layer.msg(result.msg, {icon: 5});
+                }
+
+
+                return false;
+            });
+
+        });
     });
-</script>
+</script>-->
 </body>
 </html>
