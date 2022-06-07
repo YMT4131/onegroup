@@ -59,7 +59,7 @@ public class RoleController extends BaseController {
     @ResponseBody
     public ResultInfo updateRole(Role role){
         roleService.updateRole(role);
-        return success("添加成功");
+        return success("修改成功");
     }
 
     //删除
