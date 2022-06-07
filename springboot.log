@@ -1,0 +1,234 @@
+2022-06-01 08:44:59.916 debug 11768 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 11768 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 08:44:59.946 debug 11768 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 08:45:00.042 debug 11768 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 08:45:00.043 debug 11768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 08:45:00.044 debug 11768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 08:45:01.226 debug 11768 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-06-01 08:45:01.705 debug 11768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 08:45:01.721 debug 11768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 08:45:01.721 debug 11768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 08:45:01.815 debug 11768 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 08:45:01.815 debug 11768 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1771 ms
+2022-06-01 08:45:02.021 debug 11768 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 08:45:02.223 debug 11768 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 08:45:02.262 debug 11768 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 08:45:02.662 debug 11768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 08:45:02.714 debug 11768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 08:45:02.718 debug 11768 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.53 seconds (JVM running for 6.421)
+2022-06-01 08:46:53.773 debug 11768 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 08:46:53.774 debug 11768 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 08:46:53.792 debug 11768 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2022-06-01 09:00:31.287 debug 11768 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 09:03:45.230 debug 15384 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 15384 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 09:03:45.236 debug 15384 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 09:03:45.308 debug 15384 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 09:03:45.308 debug 15384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 09:03:45.308 debug 15384 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 09:03:46.119 debug 15384 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.shanghai.dao]' package. Please check your configuration.
+2022-06-01 09:03:46.601 debug 15384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 09:03:46.643 debug 15384 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 09:03:46.643 debug 15384 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 09:03:46.729 debug 15384 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 09:03:46.729 debug 15384 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1420 ms
+2022-06-01 09:03:46.912 debug 15384 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 09:03:47.024 debug 15384 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 09:03:47.047 debug 15384 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 09:03:47.324 debug 15384 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 09:03:47.370 debug 15384 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 09:03:47.374 debug 15384 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.784 seconds (JVM running for 4.267)
+2022-06-01 09:03:55.499 debug 15384 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 09:03:55.499 debug 15384 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 09:03:55.506 debug 15384 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-06-01 09:21:36.479 debug 15384 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 16:45:33.548 debug 10408 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 10408 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 16:45:33.552 debug 10408 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 16:45:33.689 debug 10408 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 16:45:33.689 debug 10408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 16:45:33.689 debug 10408 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 16:45:35.026 debug 10408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 16:45:35.068 debug 10408 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 16:45:35.068 debug 10408 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 16:45:35.135 debug 10408 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 16:45:35.135 debug 10408 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1445 ms
+2022-06-01 16:45:35.396 debug 10408 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 16:45:35.426 debug 10408 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 16:45:35.838 debug 10408 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 16:45:36.148 debug 10408 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 16:45:36.199 debug 10408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 16:45:36.204 debug 10408 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 4.513 seconds (JVM running for 6.855)
+2022-06-01 16:49:55.254 debug 10408 --- [http-nio-8989-exec-3] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 16:49:55.254 debug 10408 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 16:49:55.260 debug 10408 --- [http-nio-8989-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-06-01 16:54:23.859 debug 10408 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 16:57:46.150 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 7416 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 16:57:46.152 debug 7416 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 16:57:46.198 debug 7416 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 16:57:46.198 debug 7416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 16:57:46.200 debug 7416 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 16:57:47.133 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 16:57:47.141 debug 7416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 16:57:47.142 debug 7416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 16:57:47.197 debug 7416 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 16:57:47.198 debug 7416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 998 ms
+2022-06-01 16:57:47.330 debug 7416 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 16:57:47.354 debug 7416 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 16:57:47.644 debug 7416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 16:57:47.869 debug 7416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 16:57:47.912 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 16:57:47.916 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.348 seconds (JVM running for 4.737)
+2022-06-01 16:58:38.409 debug 7416 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 16:58:38.409 debug 7416 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 16:58:38.414 debug 7416 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-06-01 17:09:25.790 debug 7416 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:09:26.026 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 7416 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 17:09:26.026 debug 7416 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 17:09:26.283 debug 7416 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-06-01 17:09:26.297 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 17:09:26.298 debug 7416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 17:09:26.298 debug 7416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 17:09:26.313 debug 7416 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 17:09:26.314 debug 7416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 285 ms
+2022-06-01 17:09:26.428 debug 7416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:09:26.518 debug 7416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 17:09:26.535 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 17:09:26.536 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.547 seconds (JVM running for 703.357)
+2022-06-01 17:09:26.539 debug 7416 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-01 17:10:25.108 debug 7416 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:10:34.207 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 7416 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 17:10:34.208 debug 7416 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 17:10:34.429 debug 7416 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2022-06-01 17:10:34.444 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 17:10:34.444 debug 7416 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 17:10:34.445 debug 7416 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 17:10:34.460 debug 7416 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 17:10:34.461 debug 7416 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 251 ms
+2022-06-01 17:10:34.625 debug 7416 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:10:34.723 debug 7416 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 17:10:34.741 debug 7416 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 17:10:34.742 debug 7416 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 0.558 seconds (JVM running for 771.563)
+2022-06-01 17:10:34.744 debug 7416 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-06-01 17:10:53.330 debug 7416 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:11:30.887 debug 6568 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 6568 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 17:11:30.892 debug 6568 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 17:11:31.017 debug 6568 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 17:11:31.018 debug 6568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 17:11:31.020 debug 6568 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 17:11:32.483 debug 6568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 17:11:32.492 debug 6568 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 17:11:32.493 debug 6568 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 17:11:32.564 debug 6568 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 17:11:32.564 debug 6568 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1544 ms
+2022-06-01 17:11:32.724 debug 6568 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 17:11:32.755 debug 6568 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 17:11:33.088 debug 6568 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:11:33.343 debug 6568 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 17:11:33.390 debug 6568 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 17:11:33.394 debug 6568 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.164 seconds (JVM running for 4.347)
+2022-06-01 17:12:05.638 debug 6568 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 17:12:05.638 debug 6568 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 17:12:05.647 debug 6568 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-06-01 17:14:07.251 debug 6568 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:15:44.334 debug 4020 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on DESKTOP-4R9U7E7 with PID 4020 (D:\onegroup\target\classes started by zi in D:\onegroup)
+2022-06-01 17:15:44.339 debug 4020 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-01 17:15:44.392 debug 4020 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\maven1\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/maven1/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-01 17:15:44.392 debug 4020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-01 17:15:44.394 debug 4020 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-01 17:15:45.314 debug 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-01 17:15:45.324 debug 4020 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-01 17:15:45.324 debug 4020 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-01 17:15:45.392 debug 4020 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-01 17:15:45.392 debug 4020 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 998 ms
+2022-06-01 17:15:45.552 debug 4020 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-01 17:15:45.582 debug 4020 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-01 17:15:45.903 debug 4020 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-01 17:15:46.143 debug 4020 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-01 17:15:46.209 debug 4020 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-01 17:15:46.213 debug 4020 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.355 seconds (JVM running for 3.467)
+2022-06-01 17:15:49.356 debug 4020 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-01 17:15:49.356 debug 4020 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-01 17:15:49.362 debug 4020 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-06-01 17:27:05.706 debug 4020 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-07 11:31:26.094 debug 18572 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-U6GI9N with PID 18572 (D:\IdeaProjects\onegroup\target\classes started by Hai in D:\IdeaProjects\onegroup)
+2022-06-07 11:31:26.095 debug 18572 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-07 11:31:26.121 debug 18572 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\57617\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/C:/Users/57617/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-07 11:31:26.121 debug 18572 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07 11:31:26.121 debug 18572 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07 11:31:26.634 debug 18572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-07 11:31:26.638 debug 18572 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 11:31:26.638 debug 18572 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-07 11:31:26.701 debug 18572 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-07 11:31:26.701 debug 18572 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 580 ms
+2022-06-07 11:31:26.762 debug 18572 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-07 11:31:26.774 debug 18572 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-07 11:31:27.023 debug 18572 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-07 11:31:27.171 debug 18572 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07 11:31:27.214 debug 18572 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/onegroup'
+2022-06-07 11:31:27.217 debug 18572 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 1.305 seconds (JVM running for 1.823)
+2022-06-07 11:31:29.302 debug 18572 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07 11:31:29.302 debug 18572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07 11:31:29.306 debug 18572 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-06-07 11:31:29.349 debug 18572 --- [http-nio-8080-exec-2] c.m.v.c.i.AbstractPoolBackedDataSource   : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge8t0apgphrcjs5v1zk|5b765b2, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> null, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge8t0apgphrcjs5v1zk|5b765b2, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/ccmusic?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2022-06-07 11:31:29.540 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:29.554 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:29.568 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:29.868 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:29.869 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:29.870 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:29.871 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.IndexMapper.queryModuleByUserId  : ==>  Preparing: select DISTINCT m.module_name title,m.url href,m.icon from module m LEFT JOIN permission p on p.module_id=m.module_id LEFT JOIN user_role ur on ur.role_id=p.role_id where m.parent_id=-1 and m.is_valid=1 and ur.user_id=? 
+2022-06-07 11:31:29.871 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.IndexMapper.queryModuleByUserId  : ==> Parameters: 1(Integer)
+2022-06-07 11:31:29.873 debug 18572 --- [http-nio-8080-exec-3] c.s.dao.IndexMapper.queryModuleByUserId  : <==      Total: 7
+2022-06-07 11:31:29.909 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:29.909 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:29.910 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:29.911 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countMusicNumber   : ==>  Preparing: select ifnull(count(distinct music_id),0) as musicNumber from music where is_valid = 1 
+2022-06-07 11:31:29.912 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countMusicNumber   : ==> Parameters: 
+2022-06-07 11:31:29.915 debug 18572 --- [http-nio-8080-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:29.915 debug 18572 --- [http-nio-8080-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:29.916 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countMusicNumber   : <==      Total: 1
+2022-06-07 11:31:29.916 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countSingerNumber  : ==>  Preparing: select ifnull(count(distinct singer_id),0) as singerNumber from singer where is_valid = 1 
+2022-06-07 11:31:29.916 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countSingerNumber  : ==> Parameters: 
+2022-06-07 11:31:29.916 debug 18572 --- [http-nio-8080-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:29.917 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countSingerNumber  : <==      Total: 1
+2022-06-07 11:31:29.917 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countAlbumNumber   : ==>  Preparing: select ifnull(count(distinct album_id),0) as albumNumber from album where is_valid = 1 
+2022-06-07 11:31:29.917 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countAlbumNumber   : ==> Parameters: 
+2022-06-07 11:31:29.919 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countAlbumNumber   : <==      Total: 1
+2022-06-07 11:31:29.919 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countListNumber    : ==>  Preparing: select ifnull(count(distinct list_id),0) as listNumber from list where is_valid = 1 
+2022-06-07 11:31:29.919 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countListNumber    : ==> Parameters: 
+2022-06-07 11:31:29.920 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.WelcomeMapper.countListNumber    : <==      Total: 1
+2022-06-07 11:31:30.175 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:30.175 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:30.176 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:30.211 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.querySingerByParams_COUNT        : ==>  Preparing: SELECT count(0) FROM singer s WHERE is_valid = 1 
+2022-06-07 11:31:30.211 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.querySingerByParams_COUNT        : ==> Parameters: 
+2022-06-07 11:31:30.212 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.querySingerByParams_COUNT        : <==      Total: 1
+2022-06-07 11:31:30.215 debug 18572 --- [http-nio-8080-exec-10] c.s.d.SingerMapper.querySingerByParams   : ==>  Preparing: select * from singer s WHERE is_valid = 1 LIMIT ? 
+2022-06-07 11:31:30.215 debug 18572 --- [http-nio-8080-exec-10] c.s.d.SingerMapper.querySingerByParams   : ==> Parameters: 10(Integer)
+2022-06-07 11:31:30.215 debug 18572 --- [http-nio-8080-exec-10] c.s.d.SingerMapper.querySingerByParams   : <==      Total: 7
+2022-06-07 11:31:32.483 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:32.483 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:32.485 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:32.486 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.SingerMapper.selectByPrimaryKey  : ==>  Preparing: select singer_id, singer_name, singer_gender, singer_nal, singer_info, is_join, is_valid from singer where singer_id = ? 
+2022-06-07 11:31:32.486 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.SingerMapper.selectByPrimaryKey  : ==> Parameters: 12(Integer)
+2022-06-07 11:31:32.487 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.SingerMapper.selectByPrimaryKey  : <==      Total: 1
+2022-06-07 11:31:35.299 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:35.299 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:35.301 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:35.311 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.SingerMapper.selectByPrimaryKey  : ==>  Preparing: select singer_id, singer_name, singer_gender, singer_nal, singer_info, is_join, is_valid from singer where singer_id = ? 
+2022-06-07 11:31:35.311 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.SingerMapper.selectByPrimaryKey  : ==> Parameters: 12(Integer)
+2022-06-07 11:31:35.313 debug 18572 --- [http-nio-8080-exec-10] c.s.dao.SingerMapper.selectByPrimaryKey  : <==      Total: 1
+2022-06-07 11:31:35.316 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.updateByPrimaryKeySelective      : ==>  Preparing: update singer SET singer_name = ?, singer_gender = ?, singer_nal = ?, singer_info = ? where singer_id = ? 
+2022-06-07 11:31:35.316 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.updateByPrimaryKeySelective      : ==> Parameters: 124124(String), 12421(String), 1241242245(String), 24214556(String), 12(Integer)
+2022-06-07 11:31:35.317 debug 18572 --- [http-nio-8080-exec-10] c.s.d.S.updateByPrimaryKeySelective      : <==    Updates: 1
+2022-06-07 11:31:35.843 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:35.844 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:35.846 debug 18572 --- [http-nio-8080-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:35.956 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 11:31:35.956 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 11:31:35.958 debug 18572 --- [http-nio-8080-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 11:31:35.960 debug 18572 --- [http-nio-8080-exec-5] c.s.d.S.querySingerByParams_COUNT        : ==>  Preparing: SELECT count(0) FROM singer s WHERE is_valid = 1 
+2022-06-07 11:31:35.960 debug 18572 --- [http-nio-8080-exec-5] c.s.d.S.querySingerByParams_COUNT        : ==> Parameters: 
+2022-06-07 11:31:35.961 debug 18572 --- [http-nio-8080-exec-5] c.s.d.S.querySingerByParams_COUNT        : <==      Total: 1
+2022-06-07 11:31:35.961 debug 18572 --- [http-nio-8080-exec-5] c.s.d.SingerMapper.querySingerByParams   : ==>  Preparing: select * from singer s WHERE is_valid = 1 LIMIT ? 
+2022-06-07 11:31:35.962 debug 18572 --- [http-nio-8080-exec-5] c.s.d.SingerMapper.querySingerByParams   : ==> Parameters: 10(Integer)
+2022-06-07 11:31:35.964 debug 18572 --- [http-nio-8080-exec-5] c.s.d.SingerMapper.querySingerByParams   : <==      Total: 7
+2022-06-07 11:31:40.432 debug 18572 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

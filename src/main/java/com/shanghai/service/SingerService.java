@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.shanghai.base.BaseService;
 import com.shanghai.dao.SingerMapper;
+import com.shanghai.query.ListQuery;
 import com.shanghai.query.SingerQuery;
 import com.shanghai.utils.AssertUtil;
 import com.shanghai.vo.Singer;
@@ -43,8 +44,18 @@ public class SingerService extends BaseService<Singer,Integer> {
 
     //添加歌手
     @Transactional(propagation = Propagation.REQUIRED)
-    public void addSinger(Singer singer){
+    public void saveSinger(Singer singer){
+        //非空判断
         checkSingerParams(singer.getSingerName(),singer.getSingerGender(),singer.getSingerNal());
+
+        if(StringUtils.isBlank(singer.getSingerInfo())){
+            singer.setSingerInfo(null);
+        }
+        //设置默认值
+        singer.setIsValid(1);
+        singer.setIsJoin(1);
+        //执行添加操作,判断受到影响的行数
+        AssertUtil.isTrue(singerMapper.insertSelective(singer)<1,"歌手添加失败");
     }
     //判断信息是否为空
     private void checkSingerParams(String singerName, String singerGender, String singerNal) {
@@ -53,4 +64,23 @@ public class SingerService extends BaseService<Singer,Integer> {
         AssertUtil.isTrue(StringUtils.isBlank(singerNal),"歌手国籍不能为空！");
 
     }
+    //更新歌手
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updateSinger(Singer singer){
+        //Id 主键 非空，id 对应的数据存在
+        AssertUtil.isTrue(null == singer.getSingerId(),"歌手记录不存在！");
+        Singer temp = singerMapper.selectByPrimaryKey(singer.getSingerId());
+        AssertUtil.isTrue(null == temp,"歌手记录不存在");
+        //非空校验
+        checkSingerParams(singer.getSingerName(),singer.getSingerGender(),singer.getSingerNal());
+
+        //判断原来的值是否为空
+        //执行更新
+        AssertUtil.isTrue(singerMapper.updateByPrimaryKeySelective(singer) < 1,"更新歌手失败");
+
+    }
+
+
+
+
 }

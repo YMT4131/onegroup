@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanghai.dao.WelcomeMapper">
+
+    <select id="countMusicNumber" resultType="Integer">
+        select ifnull(count(distinct music_id),0) as musicNumber
+        from music
+        where is_valid = 1
+    </select>
+
+    <select id="countSingerNumber" resultType="Integer">
+        select ifnull(count(distinct singer_id),0) as singerNumber
+        from singer
+        where is_valid = 1
+    </select>
+
+    <select id="countAlbumNumber" resultType="Integer">
+        select ifnull(count(distinct album_id),0) as albumNumber
+        from album
+        where is_valid = 1
+    </select>
+
+    <select id="countListNumber" resultType="Integer">
+        select ifnull(count(distinct list_id),0) as listNumber
+        from list
+        where is_valid = 1
+    </select>
+</mapper>

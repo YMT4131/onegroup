@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shanghai.dao.IndexMapper">
+  <select id="queryRoleIdByUserId" parameterType="int" resultType="int">
+    select role_id roleId from user_role where user_id=#{userId}
+  </select>
+  <select id="queryModuleByUserId" parameterType="int" resultType="menuModel">
+    select DISTINCT m.module_name title,m.url href,m.icon
+    from module m
+        LEFT JOIN permission p on p.module_id=m.module_id
+        LEFT JOIN user_role ur on ur.role_id=p.role_id
+    where m.parent_id=-1 and m.is_valid=1 and ur.user_id=#{userId}
+  </select>
+</mapper>
