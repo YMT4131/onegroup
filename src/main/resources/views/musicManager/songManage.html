@@ -81,7 +81,7 @@
                 {field: 'musicName', title: '歌名'},
                 {field: 'singerName', title: '歌手名', sort: true},
                 {field: 'albumName', title: '专辑名'},
-                {field: 'typeId1', title: '所属类型', sort:true},//一首歌好几种不同的类型，怎么在前端数据表格展示？
+                {field: 'typeName', title: '所属类型', sort:true},//一首歌好几种不同的类型，怎么在前端数据表格展示？
                 {field: 'isForVip', title: '是否为会员可听', sort: true},//前端怎么展示是否为会员可听
                 //{field: 'isValid', title: '状态', sort: true},isValid --为删除做准备
                 //行工具栏
@@ -160,19 +160,17 @@
         })
 
         /**
-         * 编辑、添加操作的弹出窗口---还未更改!
+         * 编辑、添加操作的弹出窗口---正在更改!
          * @constructor
          */
-        function OpenUpdateOrInsertMusicDialog() {
-            var title = "<h2>歌曲管理 - 添加歌曲</h2>";
-            var url = ctx+"/sale_chance/toSaleChancePage"
-
+        function OpenUpdateOrInsertMusicDialog(musicId) {
+            var url = ctx+"/musicManage/toAddOrUpdateMusicPage"
             //判断营销机会的id是否为空 空字符串/null
-            if(saleChanceId != null && saleChanceId != ''){
+            if(musicId != null && musicId != ''){
                 //更新操作
-                title = "<h2>营销机会管理 - 更新营销机会</h2>";
+                // title = "<h2> </h2>";
                 //请求地址 传递营销机会的id
-                url += '?saleChanceId='+saleChanceId;
+                url += '?musicId='+musicId;
             }
             //iframe 层直接layer.open父窗口直接打开；layui.layer.open不是父窗口中打开
             layui.layer.open({
@@ -199,7 +197,7 @@
 
             if(data.event == "add"){
                 //添加操作
-                OpenUpdateOrInsertMusicDialog();
+                OpenUpdateOrInsertMusicDialog(null);
 
             } else if(data.event == "delete"){
                 //table.checkStatus();获取数据表格选中的行数据
