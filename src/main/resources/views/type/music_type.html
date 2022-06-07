@@ -33,7 +33,7 @@
         <script type="text/html" id="toolbarDemo">
             <div class="layui-btn-container">
                 <button class="layui-btn layui-btn-normal layui-btn-sm data-add-btn" lay-event="add"> 添加 </button>
-                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="delete"> 删除 </button>
+                <button class="layui-btn layui-btn-sm layui-btn-danger data-delete-btn" lay-event="del"> 删除 </button>
             </div>
         </script>
 
@@ -52,7 +52,7 @@
             form = layui.form,
             table = layui.table;
 
-        table.render({
+        var tableIns=table.render({
             elem: '#currentTableId',
             url: ctx+'/type/list',
             toolbar: '#toolbarDemo',
@@ -110,30 +110,66 @@
                 $(window).on("resize", function () {
                     layer.full(index);
                 });
-            } else if (obj.event === 'delete') {  // 监听删除操作
-                var checkStatus = table.checkStatus('currentTableId')
-                    , data = checkStatus.data;
-                layer.alert(JSON.stringify(data));
+            } else if (obj.event === 'del') {  // 监听删除操作
+                var checkStatus = table.checkStatus('currentTableId');
+
+                deleteByIdType(checkStatus.data);
+
             }
         });
 
-        //监听表格复选框选择
-        table.on('checkbox(currentTableFilter)', function (obj) {
-            console.log(obj)
-        });
+        function deleteByIdType(data){
+            if(data.length==0){
+                layer.msg("请选择要删除的歌曲类型!");
+                return;
+            }
+            layer.confirm("您确定要删除选中的记录吗？", {
+                btn: ["确认", "取消"],
+            }, function (index) {
+// 关闭确认框
+                layer.close(index);
+// ids=1&ids=2&ids=3
+                var ids = "ids=";
+// 遍历获取对应的id
+                for (var i = 0; i < data.length; i++) {
+                    if (i < data.length - 1) {
+                        ids = ids + data[i].typeId + "&ids=";
+                    } else {
+                        ids = ids + data[i].typeId;
+                    }
+                }
+                console.log(ids);
+// 发送ajax请求，删除记录
+                $.ajax({
+                    type: "post",
+                    url: ctx + "/type/delete",
+                    data: ids, // 参数传递的是数组
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.code == 200) {
+// 加载表格
+                            tableIns.reload();
+                        } else {
+                            layer.msg(result.msg, {icon: 5});
+                        }
+                    }
+                });
+            });
+        }
 
         table.on('tool(currentTableFilter)', function (obj) {
             var data = obj.data;
+            console.log(data)
             if (obj.event === 'edit') {
 
                 var index = layer.open({
-                    title: '编辑用户',
+                    title: '编辑音乐类型',
                     type: 2,
                     shade: 0.2,
                     maxmin:true,
                     shadeClose: true,
-                    area: ['100%', '100%'],
-                    content: ctx + "/type/addTypePage",
+                    area: ['40%', '70%'],
+                    content: ctx + "/type/addTypePage?id="+data.typeId,
                 });
                 $(window).on("resize", function () {
                     layer.full(index);
@@ -141,8 +177,23 @@
                 return false;
             } else if (obj.event === 'delete') {
                 layer.confirm('真的删除行么', function (index) {
-                    obj.del();
                     layer.close(index);
+                    $.ajax({
+                        type:"post",
+                        url:ctx +"/type/delete",
+                        data:{
+                            ids:data.typeId
+                        },
+                        dataType:"json",
+                        success:function (result){
+                            if(result.code==200){
+                                layer.msg("删除成功");
+                                tableIns.reload();
+                            }else{
+                                layer.msg(result.msg,{icon:5});
+                            }
+                        }
+                    });
                 });
             }
         });

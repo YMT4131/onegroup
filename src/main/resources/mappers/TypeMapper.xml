@@ -99,6 +99,14 @@
     select <include refid="Base_Column_List" /> from type
 where type_name=#{typeName}
   </select>
-<!--  修改数据-->
-
+<!--  批量删除数据-->
+<update id="deleteBatch">
+  update  type
+  set is_valid=0
+  where type_id
+  in
+  <foreach collection="array" item="id" separator="," open="(" close=")">
+    #{id}
+  </foreach>
+</update>
 </mapper>
