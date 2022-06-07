@@ -1,6 +1,9 @@
 package com.shanghai.po;
 
 public class Music {
+    //所属类型
+    private String typeName;
+
     private Integer musicId;
 
     private String musicName;
@@ -18,6 +21,14 @@ public class Music {
     private Integer isForVip;
 
     private Integer isValid;
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 
     public Integer getMusicId() {
         return musicId;
