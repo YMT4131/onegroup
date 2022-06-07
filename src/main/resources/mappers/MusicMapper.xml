@@ -33,6 +33,7 @@
       #{typeId3,jdbcType=INTEGER}, #{isForVip,jdbcType=INTEGER}, #{isValid,jdbcType=INTEGER}
       )
   </insert>
+
   <!--添加操作：头部工具栏-->
   <insert id="insertSelective" parameterType="com.shanghai.po.Music" >
     insert into
@@ -97,7 +98,23 @@
     </trim>
   </insert>
 
-  <!--行工具栏-单条记录的编辑-->
+
+  <!--供添加操作下拉框使用  singer   querySinger-->
+  <select id="querySinger" resultType="com.shanghai.model.MusicSingerModel">
+    select
+        singer_id,singer_name
+    from
+        singer
+  </select>
+  <!--下拉框  album-->
+  <select id="queryAlbum" resultType="com.shanghai.model.MusicAlbumModel">
+        select
+            album_name,album_id
+        from
+            album
+  </select>
+
+  <!--行工具栏-单条记录的编辑  入参为po包下的Music类  updateByPrimaryKeySelective-->
   <update id="updateByPrimaryKeySelective" parameterType="com.shanghai.po.Music" >
     update music
     <set >
@@ -128,6 +145,9 @@
     </set>
     where music_id = #{musicId,jdbcType=INTEGER}
   </update>
+
+
+
   <update id="updateByPrimaryKey" parameterType="com.shanghai.po.Music" >
     update music
     set music_name = #{musicName,jdbcType=VARCHAR},
@@ -150,7 +170,8 @@
         music_id,m.singer_id,m.album_id,type_id_1,type_id_2,
         type_id_3,is_for_VIP,music_name,
         s.singer_name as singerName,
-        a.album_name as albumName
+        a.album_name as albumName,
+        t.type_name as typeName
     from
         music m
     left join
@@ -161,6 +182,10 @@
         album a
     on
         m.album_id = a.album_id
+    left join
+        type t
+    on
+        m.type_id_1 = t.type_id
     <where>
       m.is_valid = 1
       <if test="musicName != null and musicName != ''">

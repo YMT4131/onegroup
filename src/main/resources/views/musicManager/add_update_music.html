@@ -54,22 +54,15 @@
     </div>
   </div>
 
-<!--  <div class="layui-form-item">-->
-<!--    <label class="layui-form-label ">歌曲风格</label>-->
-<!--    <div class="layui-input-block">-->
-<!--      <input type="text" name="type" id="type"  placeholder="歌曲风格选择" value="${(music.typeName)!}" class="layui-input">-->
-<!--      <input type="hidden" name="typeId" id="typeId1"   value="${(music.typeId1)!}" >-->
-<!--    </div>-->
-<!--  </div>-->
-
-
 
   <div class="layui-form-item">
     <label class="layui-form-label">是否为会员可听</label>
     <div class="layui-input-block">
-      <input type="radio" name="isForVip" value="1" title="是" checked="">
-      <input type="radio" name="isForVip" value="0" title="否">
-<!--      <input type="radio" name="sex" value="禁" title="禁用" disabled="">-->
+      <select name="isForVip" lay-verify="required">
+        <option value=""></option>
+        <option value="0">是</option>
+        <option value="1">否</option>
+      </select>
     </div>
   </div>
 
