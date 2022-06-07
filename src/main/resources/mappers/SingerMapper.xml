@@ -133,4 +133,13 @@
       </if>
     </where>
   </select>
+<!--删除操作-->
+  <update id="deleteBatch">
+    update singer
+    set is_valid = 0
+    where singer_id in
+    <foreach collection="array" item="id" open="(" separator="," close=")">
+      #{id}
+    </foreach>
+  </update>
 </mapper>

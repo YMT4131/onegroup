@@ -58,4 +58,12 @@ public class SingerController extends BaseController {
         singerService.updateSinger(singer);
         return success("歌手更新成功");
     }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public ResultInfo deleteSinger(Integer[] ids){
+        //删除歌手
+        singerService.deleteSinger(ids);
+        return success("歌手删除成功");
+    }
 }

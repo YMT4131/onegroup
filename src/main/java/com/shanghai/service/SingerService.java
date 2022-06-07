@@ -80,7 +80,12 @@ public class SingerService extends BaseService<Singer,Integer> {
 
     }
 
-
-
-
+    //删除歌手
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteSinger(Integer[] ids) {
+        //非空判断
+        AssertUtil.isTrue(null == ids || ids.length < 1,"歌手记录不存在");
+        //删除操作
+        AssertUtil.isTrue(singerMapper.deleteBatch(ids) != ids.length,"歌手记录删除失败");
+    }
 }
