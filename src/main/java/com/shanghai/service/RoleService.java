@@ -2,7 +2,6 @@ package com.shanghai.service;
 
 import com.shanghai.base.BaseService;
 import com.shanghai.dao.RoleMapper;
-import com.shanghai.po.Role;
 import com.shanghai.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;

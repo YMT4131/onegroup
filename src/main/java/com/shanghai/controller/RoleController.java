@@ -2,12 +2,9 @@ package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
-import com.shanghai.po.Role;
-import com.shanghai.po.vo.AlbumModel;
 import com.shanghai.query.RoleQuery;
 import com.shanghai.service.RoleService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
