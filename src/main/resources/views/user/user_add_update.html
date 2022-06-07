@@ -14,6 +14,7 @@
 <div class="layui-form layuimini-form">
     <!-- 设置营销机会ID的隐藏域 -->
     <input type="hidden" name="userId" id="userId" value="${(user.userId)!}">
+    <input type="hidden" name="rolenameId" id="rolenameId" value="${(user.roleId)!}">
     <div class="layui-form-item">
         <label class="layui-form-label required">用户名</label>
         <div class="layui-input-block">
@@ -40,15 +41,37 @@
     <div class="layui-form-item">
         <label class="layui-form-label">生日</label>
         <div class="layui-input-block">
-            <input type="text" name="userBirthday" placeholder="请输入生日" value="${(user.userBirthday)!}" class="layui-input">
+            <input type="text" name="userBirthday" placeholder="请输入生日"
+                   value="${((user.userBirthday)?string('yyyy-MM-dd'))!}" class="layui-input">
         </div>
     </div>
-    <div class="layui-form-item layui-form-text">
-        <label class="layui-form-label">注册时间</label>
+<!--    <div class="layui-form-item layui-form-text">-->
+<!--        <label class="layui-form-label">注册时间</label>-->
+<!--        <div class="layui-input-block">-->
+    <!--            <textarea name="userJoinDate" class="layui-textarea" placeholder="请输入注册时间"></textarea>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <!--<div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">角色</label>
         <div class="layui-input-block">
-            <textarea name="userJoinDate" class="layui-textarea" placeholder="请输入注册时间"></textarea>
+            <select name="roleIds" xm-select="selectId">
+            </select>
+        </div>
+    </div>-->
+    <div class="layui-form-item layui-row layui-col-xs12">
+        <label class="layui-form-label">角色</label>
+        <div class="layui-input-block">
+            <select name="roleId" id="roleId">
+                <option value="">请选择</option>
+            </select>
         </div>
     </div>
+
+
+
+
+
 
     <div class="layui-form-item">
         <div class="layui-input-block">

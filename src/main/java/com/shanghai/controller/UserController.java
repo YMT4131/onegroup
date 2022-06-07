@@ -3,6 +3,7 @@ package com.shanghai.controller;
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
 import com.shanghai.po.User;
+import com.shanghai.po.vo.UserModel;
 import com.shanghai.query.UserQuery;
 import com.shanghai.service.UserService;
 import org.springframework.stereotype.Controller;
@@ -39,28 +40,28 @@ public class UserController extends BaseController {
 
     /**
      * 添加用户
-     * @param user
+     * @param userModel
      * @return
      */
     @PostMapping("add")
     @ResponseBody
-    public ResultInfo addUser(@RequestBody User user){
+    public ResultInfo addUser(@RequestBody UserModel userModel){
         //调用Service层的添加方法
-        userService.addUser(user);
+        userService.addUser(userModel);
         return success("用户添加成功！");
     }
 
 
     /**
      * 更新用户
-     * @param user
+     * @param userModel
      * @return
      */
     @PostMapping("update")
     @ResponseBody
-    public ResultInfo updateUser(@RequestBody User user){
+    public ResultInfo updateUser(@RequestBody UserModel userModel){
         //调用Service层的添加方法
-        userService.updateUser(user);
+        userService.updateUser(userModel);
         return success("用户更新成功！");
     }
 
@@ -76,7 +77,7 @@ public class UserController extends BaseController {
         //判断userId是否为空
         if(userId != null){
             //通过ID查询用户数据
-            User user = userService.selectByPrimaryKey(userId);
+            UserModel user = userService.selectUserByUserId(userId);
             //将数据设置到请求域中
             request.setAttribute("user", user);
 
@@ -95,7 +96,7 @@ public class UserController extends BaseController {
     @ResponseBody
     public ResultInfo deleteUser(Integer[] ids){
         //调用service层的删除方法
-        userService.deleteBatch(ids);
+        userService.deleteUser(ids);
         return success("用户数据删除成功！");
     }
 
@@ -109,6 +110,18 @@ public class UserController extends BaseController {
     @RequestMapping("index")
     public String index(){
         return "user/user_index";
+    }
+
+    /*----------------------------------------------------------------*/
+
+    /**
+     * 查询所有的角色列表
+     * @return
+     */
+    @RequestMapping("queryAllRoles")
+    @ResponseBody
+    public List<Map<String,Object>> queryAllRoles(){
+        return userService.queryAllRoles();
     }
 
 }

@@ -1,3 +1,5 @@
 /.idea/
 /src/main/resources/application-dev.yml
 /springboot.log
+/pom.xml
+/src/main/resources/generatorConfig.xml

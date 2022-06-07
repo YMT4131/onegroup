@@ -1,6 +1,8 @@
 package com.shanghai.po.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.shanghai.base.BaseQuery;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -13,8 +15,12 @@ public class UserModel extends BaseQuery {
 
     private String userGender;
 
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date userBirthday;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date userJoinDate;
 
     private Integer isVip;
@@ -22,6 +28,10 @@ public class UserModel extends BaseQuery {
     private Integer isValid;
 
     private String userIdStr;
+
+    private Integer roleId;
+
+    private String roleName;
 
     public Integer getUserId() {
         return userId;
@@ -93,5 +103,37 @@ public class UserModel extends BaseQuery {
 
     public void setUserIdStr(String userIdStr) {
         this.userIdStr = userIdStr;
+    }
+
+/*    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }*/
+
+    /*public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }*/
+
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
+    }
+
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 }

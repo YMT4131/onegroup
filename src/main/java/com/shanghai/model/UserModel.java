@@ -94,4 +94,5 @@ public class UserModel {
     public void setUserIdStr(String userIdStr) {
         this.userIdStr = userIdStr;
     }
+
 }
