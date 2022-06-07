@@ -232,3 +232,187 @@
 2022-06-07 11:31:35.962 debug 18572 --- [http-nio-8080-exec-5] c.s.d.SingerMapper.querySingerByParams   : ==> Parameters: 10(Integer)
 2022-06-07 11:31:35.964 debug 18572 --- [http-nio-8080-exec-5] c.s.d.SingerMapper.querySingerByParams   : <==      Total: 7
 2022-06-07 11:31:40.432 debug 18572 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-07 17:05:57.862 debug 35716 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 35716 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-06-07 17:05:57.862 debug 35716 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-07 17:05:57.894 debug 35716 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-07 17:05:57.894 debug 35716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07 17:05:57.894 debug 35716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07 17:05:58.961 debug 35716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-07 17:05:58.961 debug 35716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 17:05:58.961 debug 35716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-07 17:05:59.024 debug 35716 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-07 17:05:59.024 debug 35716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1130 ms
+2022-06-07 17:05:59.165 debug 35716 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-07 17:05:59.196 debug 35716 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-07 17:05:59.652 debug 35716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-07 17:05:59.997 debug 35716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07 17:06:00.044 debug 35716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-07 17:06:00.044 debug 35716 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 2.6 seconds (JVM running for 3.757)
+2022-06-07 17:06:05.121 debug 35716 --- [http-nio-8989-exec-1] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-07 17:06:05.121 debug 35716 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-07 17:06:05.127 debug 35716 --- [http-nio-8989-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-06-07 17:06:05.209 debug 35716 --- [http-nio-8989-exec-1] c.m.v.c.i.AbstractPoolBackedDataSource   : Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge8t3aph1fzbh16fjfvb|11e2f017, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> null, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge8t3aph1fzbh16fjfvb|11e2f017, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://127.0.0.1:3306/music?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 15, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {password=******, user=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2022-06-07 17:06:05.533 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:05.551 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.573 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:05.752 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:05.753 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.755 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:05.757 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.IndexMapper.queryModuleByUserId  : ==>  Preparing: select DISTINCT m.module_name title,m.url href,m.icon from module m LEFT JOIN permission p on p.module_id=m.module_id LEFT JOIN user_role ur on ur.role_id=p.role_id where m.parent_id=-1 and m.is_valid=1 and ur.user_id=? 
+2022-06-07 17:06:05.757 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.IndexMapper.queryModuleByUserId  : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.764 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.IndexMapper.queryModuleByUserId  : <==      Total: 7
+2022-06-07 17:06:05.819 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:05.820 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.821 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:05.824 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : ==>  Preparing: select ifnull(count(distinct music_id),0) as musicNumber from music where is_valid = 1 
+2022-06-07 17:06:05.824 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : ==> Parameters: 
+2022-06-07 17:06:05.826 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:05.827 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.829 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : <==      Total: 1
+2022-06-07 17:06:05.829 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:05.829 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : ==>  Preparing: select ifnull(count(distinct singer_id),0) as singerNumber from singer where is_valid = 1 
+2022-06-07 17:06:05.829 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : ==> Parameters: 
+2022-06-07 17:06:05.832 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : <==      Total: 1
+2022-06-07 17:06:05.832 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : ==>  Preparing: select ifnull(count(distinct album_id),0) as albumNumber from album where is_valid = 1 
+2022-06-07 17:06:05.833 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : ==> Parameters: 
+2022-06-07 17:06:05.836 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : <==      Total: 1
+2022-06-07 17:06:05.836 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : ==>  Preparing: select ifnull(count(distinct list_id),0) as listNumber from list where is_valid = 1 
+2022-06-07 17:06:05.837 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : ==> Parameters: 
+2022-06-07 17:06:05.839 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : <==      Total: 1
+2022-06-07 17:06:05.927 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:05.928 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:05.929 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:05.995 debug 35716 --- [http-nio-8989-exec-5] c.s.d.S.querySingerByParams_COUNT        : ==>  Preparing: SELECT count(0) FROM singer s WHERE is_valid = 1 
+2022-06-07 17:06:05.995 debug 35716 --- [http-nio-8989-exec-5] c.s.d.S.querySingerByParams_COUNT        : ==> Parameters: 
+2022-06-07 17:06:05.996 debug 35716 --- [http-nio-8989-exec-5] c.s.d.S.querySingerByParams_COUNT        : <==      Total: 1
+2022-06-07 17:06:05.998 debug 35716 --- [http-nio-8989-exec-5] c.s.d.SingerMapper.querySingerByParams   : ==>  Preparing: select * from singer s WHERE is_valid = 1 LIMIT ? 
+2022-06-07 17:06:05.999 debug 35716 --- [http-nio-8989-exec-5] c.s.d.SingerMapper.querySingerByParams   : ==> Parameters: 10(Integer)
+2022-06-07 17:06:06.000 debug 35716 --- [http-nio-8989-exec-5] c.s.d.SingerMapper.querySingerByParams   : <==      Total: 4
+2022-06-07 17:06:09.943 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:09.944 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:09.946 debug 35716 --- [http-nio-8989-exec-2] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:10.047 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:10.048 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:10.049 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:10.050 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.IndexMapper.queryModuleByUserId  : ==>  Preparing: select DISTINCT m.module_name title,m.url href,m.icon from module m LEFT JOIN permission p on p.module_id=m.module_id LEFT JOIN user_role ur on ur.role_id=p.role_id where m.parent_id=-1 and m.is_valid=1 and ur.user_id=? 
+2022-06-07 17:06:10.050 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.IndexMapper.queryModuleByUserId  : ==> Parameters: 1(Integer)
+2022-06-07 17:06:10.052 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.IndexMapper.queryModuleByUserId  : <==      Total: 7
+2022-06-07 17:06:10.062 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:10.063 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:10.066 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:10.068 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : ==>  Preparing: select ifnull(count(distinct music_id),0) as musicNumber from music where is_valid = 1 
+2022-06-07 17:06:10.068 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : ==> Parameters: 
+2022-06-07 17:06:10.069 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countMusicNumber   : <==      Total: 1
+2022-06-07 17:06:10.070 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : ==>  Preparing: select ifnull(count(distinct singer_id),0) as singerNumber from singer where is_valid = 1 
+2022-06-07 17:06:10.071 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : ==> Parameters: 
+2022-06-07 17:06:10.072 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countSingerNumber  : <==      Total: 1
+2022-06-07 17:06:10.072 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : ==>  Preparing: select ifnull(count(distinct album_id),0) as albumNumber from album where is_valid = 1 
+2022-06-07 17:06:10.072 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : ==> Parameters: 
+2022-06-07 17:06:10.074 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countAlbumNumber   : <==      Total: 1
+2022-06-07 17:06:10.076 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : ==>  Preparing: select ifnull(count(distinct list_id),0) as listNumber from list where is_valid = 1 
+2022-06-07 17:06:10.076 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : ==> Parameters: 
+2022-06-07 17:06:10.078 debug 35716 --- [http-nio-8989-exec-7] c.s.dao.WelcomeMapper.countListNumber    : <==      Total: 1
+2022-06-07 17:06:12.415 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:12.416 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:12.417 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:12.494 debug 35716 --- [http-nio-8989-exec-8] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:12.494 debug 35716 --- [http-nio-8989-exec-8] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:12.496 debug 35716 --- [http-nio-8989-exec-8] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:12.507 debug 35716 --- [http-nio-8989-exec-8] c.s.d.S.querySingerByParams_COUNT        : ==>  Preparing: SELECT count(0) FROM singer s WHERE is_valid = 1 
+2022-06-07 17:06:12.507 debug 35716 --- [http-nio-8989-exec-8] c.s.d.S.querySingerByParams_COUNT        : ==> Parameters: 
+2022-06-07 17:06:12.510 debug 35716 --- [http-nio-8989-exec-8] c.s.d.S.querySingerByParams_COUNT        : <==      Total: 1
+2022-06-07 17:06:12.511 debug 35716 --- [http-nio-8989-exec-8] c.s.d.SingerMapper.querySingerByParams   : ==>  Preparing: select * from singer s WHERE is_valid = 1 LIMIT ? 
+2022-06-07 17:06:12.512 debug 35716 --- [http-nio-8989-exec-8] c.s.d.SingerMapper.querySingerByParams   : ==> Parameters: 10(Integer)
+2022-06-07 17:06:12.522 debug 35716 --- [http-nio-8989-exec-8] c.s.d.SingerMapper.querySingerByParams   : <==      Total: 4
+2022-06-07 17:06:13.400 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:13.401 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:13.404 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:26.154 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:26.155 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:26.157 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:26.158 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.SingerMapper.selectByPrimaryKey  : ==>  Preparing: select singer_id, singer_name, singer_gender, singer_nal, singer_info, is_join, is_valid from singer where singer_id = ? 
+2022-06-07 17:06:26.159 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.SingerMapper.selectByPrimaryKey  : ==> Parameters: 1(Integer)
+2022-06-07 17:06:26.161 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.SingerMapper.selectByPrimaryKey  : <==      Total: 1
+2022-06-07 17:06:31.010 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:31.011 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:31.013 debug 35716 --- [http-nio-8989-exec-6] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:59.850 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:59.851 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:59.852 debug 35716 --- [http-nio-8989-exec-9] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:59.910 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:06:59.911 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:06:59.912 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:06:59.928 debug 35716 --- [http-nio-8989-exec-1] c.s.d.AlbumMapper.queryAlbumList_COUNT   : ==>  Preparing: SELECT count(0) FROM album a LEFT JOIN singer s ON s.singer_id = a.singer_id WHERE a.is_valid = 1 
+2022-06-07 17:06:59.928 debug 35716 --- [http-nio-8989-exec-1] c.s.d.AlbumMapper.queryAlbumList_COUNT   : ==> Parameters: 
+2022-06-07 17:06:59.930 debug 35716 --- [http-nio-8989-exec-1] c.s.d.AlbumMapper.queryAlbumList_COUNT   : <==      Total: 1
+2022-06-07 17:06:59.930 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.AlbumMapper.queryAlbumList       : ==>  Preparing: select a.*,s.singer_name singer from album a LEFT JOIN singer s on s.singer_id=a.singer_id WHERE a.is_valid=1 LIMIT ? 
+2022-06-07 17:06:59.930 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.AlbumMapper.queryAlbumList       : ==> Parameters: 10(Integer)
+2022-06-07 17:06:59.932 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.AlbumMapper.queryAlbumList       : <==      Total: 10
+2022-06-07 17:07:10.295 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:10.296 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:10.299 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:10.365 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:10.365 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:10.367 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:10.382 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.TypeMapper.queryType_COUNT       : ==>  Preparing: SELECT count(0) FROM type t LEFT JOIN (SELECT type_id_1, COUNT(type_id_1) AS typeSong FROM music GROUP BY type_id_1) w ON t.type_id = w.type_id_1 LEFT JOIN (SELECT type_id, count(type_id) AS typeMenu FROM list GROUP BY type_id) p ON t.type_id = p.type_id WHERE is_valid = 1 
+2022-06-07 17:07:10.382 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.TypeMapper.queryType_COUNT       : ==> Parameters: 
+2022-06-07 17:07:10.386 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.TypeMapper.queryType_COUNT       : <==      Total: 1
+2022-06-07 17:07:10.387 debug 35716 --- [http-nio-8989-exec-10] com.shanghai.dao.TypeMapper.queryType    : ==>  Preparing: select t.type_id, t.type_name, t.type_info, w.typeSong, p.typeMenu, t.is_valid from type t left join (select type_id_1, COUNT(type_id_1) as typeSong from music GROUP BY type_id_1) w on t.type_id = w.type_id_1 left join (select type_id, count(type_id) as typeMenu from list GROUP BY type_id) p on t.type_id = p.type_id WHERE is_valid=1 LIMIT ? 
+2022-06-07 17:07:10.387 debug 35716 --- [http-nio-8989-exec-10] com.shanghai.dao.TypeMapper.queryType    : ==> Parameters: 15(Integer)
+2022-06-07 17:07:10.390 debug 35716 --- [http-nio-8989-exec-10] com.shanghai.dao.TypeMapper.queryType    : <==      Total: 5
+2022-06-07 17:07:11.675 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:11.676 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:11.678 debug 35716 --- [http-nio-8989-exec-3] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:16.429 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:16.429 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:16.431 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:16.433 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.TypeMapper.selectByPrimaryKey    : ==>  Preparing: select type_id, type_name, type_info, is_valid from type where type_id = ? 
+2022-06-07 17:07:16.433 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.TypeMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:16.434 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.TypeMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:20.008 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:20.008 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:20.009 debug 35716 --- [http-nio-8989-exec-4] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:20.081 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:20.081 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:20.083 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:20.094 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams_COUNT  : ==>  Preparing: SELECT count(0) FROM user u LEFT JOIN user_role r ON u.user_id = r.user_id LEFT JOIN (SELECT * FROM role WHERE is_valid = 1) rr ON r.role_id = rr.role_id WHERE u.is_valid = 1 
+2022-06-07 17:07:20.094 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams_COUNT  : ==> Parameters: 
+2022-06-07 17:07:20.095 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams_COUNT  : <==      Total: 1
+2022-06-07 17:07:20.096 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams        : ==>  Preparing: select u.user_id as userId, u.user_name as userName, u.user_pwd as userPwd, u.user_gender as userGender, u.user_birthday as userBirthday, u.user_join_date as userJoinDate, u.is_VIP as isVIP,r.role_id as roleId,rr.role_name as roleName from user u left join user_role r on u.user_id = r.user_id left join ( select * from role where is_valid=1 ) rr on r.role_id=rr.role_id WHERE u.is_valid = 1 LIMIT ? 
+2022-06-07 17:07:20.096 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams        : ==> Parameters: 10(Integer)
+2022-06-07 17:07:20.097 debug 35716 --- [http-nio-8989-exec-5] c.s.dao.UserMapper.selectByParams        : <==      Total: 4
+2022-06-07 17:07:24.648 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:24.649 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:24.650 debug 35716 --- [http-nio-8989-exec-1] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:24.725 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==>  Preparing: select user_id, user_name, user_pwd, user_gender, user_birthday, user_join_date, is_VIP, is_valid from user where user_id = ? 
+2022-06-07 17:07:24.725 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : ==> Parameters: 1(Integer)
+2022-06-07 17:07:24.727 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2022-06-07 17:07:24.737 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams_COUNT  : ==>  Preparing: SELECT count(0) FROM list l LEFT JOIN (SELECT type_id, type_name FROM type WHERE is_valid = 1) t ON l.type_id = t.type_id WHERE l.is_valid = 1 
+2022-06-07 17:07:24.738 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams_COUNT  : ==> Parameters: 
+2022-06-07 17:07:24.740 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams_COUNT  : <==      Total: 1
+2022-06-07 17:07:24.741 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams        : ==>  Preparing: select l.list_id, l.list_name, l.list_info, t.type_id, t.type_name from list l left join ( select type_id, type_name from type where is_valid = 1 ) t on l.type_id = t.type_id WHERE l.is_valid = 1 LIMIT ? 
+2022-06-07 17:07:24.741 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams        : ==> Parameters: 15(Integer)
+2022-06-07 17:07:24.743 debug 35716 --- [http-nio-8989-exec-10] c.s.dao.ListMapper.selectByParams        : <==      Total: 2
+2022-06-07 17:07:24.744 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : ==>  Preparing: select m.music_name from list_has_music lm left join music m on lm.music_id = m.music_id where lm.list_id = ? and m.is_valid = 1 
+2022-06-07 17:07:24.744 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : ==> Parameters: 1(Integer)
+2022-06-07 17:07:24.747 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : <==      Total: 3
+2022-06-07 17:07:24.747 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : ==>  Preparing: select m.music_name from list_has_music lm left join music m on lm.music_id = m.music_id where lm.list_id = ? and m.is_valid = 1 
+2022-06-07 17:07:24.748 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : ==> Parameters: 2(Integer)
+2022-06-07 17:07:24.749 debug 35716 --- [http-nio-8989-exec-10] c.s.d.L.queryListHasMusicByListId        : <==      Total: 7
+2022-06-07 17:07:54.355 debug 35716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-06-07 17:18:26.767 debug 33976 --- [restartedMain] com.shanghai.Starter                     : Starting Starter on LAPTOP-R3JA7L62 with PID 33976 (C:\Users\86135\IdeaProjects\oneGroup\target\classes started by 86135 in C:\Users\86135\IdeaProjects\oneGroup)
+2022-06-07 17:18:26.783 debug 33976 --- [restartedMain] com.shanghai.Starter                     : The following profiles are active: dev
+2022-06-07 17:18:26.821 debug 33976 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in D:\.m2\repository\com\mchange\c3p0\0.9.5.5\c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/D:/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2022-06-07 17:18:26.821 debug 33976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-07 17:18:26.821 debug 33976 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-07 17:18:28.145 debug 33976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8989 (http)
+2022-06-07 17:18:28.161 debug 33976 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-07 17:18:28.161 debug 33976 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2022-06-07 17:18:28.223 debug 33976 --- [restartedMain] o.a.c.c.C.[.[localhost].[/onegroup]      : Initializing Spring embedded WebApplicationContext
+2022-06-07 17:18:28.223 debug 33976 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1402 ms
+2022-06-07 17:18:28.412 debug 33976 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2022-06-07 17:18:28.443 debug 33976 --- [restartedMain] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2022-06-07 17:18:29.008 debug 33976 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-06-07 17:18:29.395 debug 33976 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-07 17:18:29.440 debug 33976 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8989 (http) with context path '/onegroup'
+2022-06-07 17:18:29.440 debug 33976 --- [restartedMain] com.shanghai.Starter                     : Started Starter in 3.086 seconds (JVM running for 4.432)
