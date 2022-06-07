@@ -96,8 +96,10 @@
   </select>
 <!--  根据名称查询信息-->
   <select id="queryTypeByName" parameterType="String" resultType="type" >
-    select <include refid="Base_Column_List" /> from type
-where type_name=#{typeName}
+    select
+    <include refid="Base_Column_List"/>
+    from type
+    where is_valid=1 and type_name=#{typeName}
   </select>
 <!--  批量删除数据-->
 <update id="deleteBatch">
