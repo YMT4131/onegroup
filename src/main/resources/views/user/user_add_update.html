@@ -41,7 +41,8 @@
     <div class="layui-form-item">
         <label class="layui-form-label">生日</label>
         <div class="layui-input-block">
-            <input type="text" name="userBirthday" placeholder="请输入生日" value="${(user.userBirthday)!}" class="layui-input">
+            <input type="text" name="userBirthday" placeholder="请输入生日"
+                   value="${((user.userBirthday)?string('yyyy-MM-dd'))!}" class="layui-input">
         </div>
     </div>
 <!--    <div class="layui-form-item layui-form-text">-->
