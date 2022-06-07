@@ -23,7 +23,7 @@ public class IndexService{
         //homeInfo初始化
         Map<String,Object> homeInfo= new HashMap<>();
         homeInfo.put("title","首页");
-        homeInfo.put("href","welcome");
+        homeInfo.put("href","welcome/index");
         map.put("homeInfo",homeInfo);
         //logoInfo初始化
         Map<String,Object> logoInfo = new HashMap<>();
