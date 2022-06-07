@@ -126,4 +126,16 @@
     and
         role_name=#{roleName}
   </select>
+  <update id="deleteBatch">
+    update
+        role
+    set
+        is_valid = 0
+    where
+        role_id
+    in
+        <foreach collection="array" separator="," open="(" close=")" item="role_id">
+             #{role_id}
+        </foreach>
+  </update>
 </mapper>
