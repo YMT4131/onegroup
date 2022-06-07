@@ -5,7 +5,9 @@
 </head>
 <body class="childrenBody">
 <form class="layui-form" style="width:80%;">
+
     <input name="id" type="hidden" value="${(role.id)!}"/>
+
     <div class="layui-form-item layui-row layui-col-xs12">
         <label class="layui-form-label">角色名</label>
         <div class="layui-input-block">
@@ -25,7 +27,7 @@
     <div class="layui-form-item layui-row layui-col-xs12">
         <div class="layui-input-block">
             <button class="layui-btn layui-btn-lg" lay-submit=""
-                    lay-filter="addOrUpdateRole">确认
+                    lay-filter="addOrUpdateRole" id="saveBtn">确认
             </button>
             <button class="layui-btn layui-btn-lg layui-btn-normal" id="closeBtn">取消</button>
         </div>
