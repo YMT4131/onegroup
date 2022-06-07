@@ -6,7 +6,9 @@ import com.github.pagehelper.PageInfo;
 import com.shanghai.base.BaseService;
 import com.shanghai.base.ResultInfo;
 import com.shanghai.dao.UserMapper;
+import com.shanghai.dao.UserRoleMapper;
 import com.shanghai.po.User;
+import com.shanghai.po.UserRole;
 import com.shanghai.po.vo.UserModel;
 import com.shanghai.query.UserQuery;
 import com.shanghai.po.vo.UserPasswordModel;
@@ -22,14 +24,14 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.xml.crypto.Data;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class UserService extends BaseService<User,Integer> {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private UserRoleMapper userRoleMapper;
 
     public ResultInfo login(UserModel userModel) {
         ResultInfo resultInfo = new ResultInfo();
@@ -105,7 +107,7 @@ public class UserService extends BaseService<User,Integer> {
         PageHelper.startPage(userQuery.getPage(), userQuery.getLimit());
 
         //得到对应的分页对象
-        PageInfo<User> pageInfo = new PageInfo<>(userMapper.selectByParams(userQuery));
+        PageInfo<UserModel> pageInfo = new PageInfo<>(userMapper.selectByParams(userQuery));
 
         //设置map对象
         map.put("code",0);
@@ -127,30 +129,41 @@ public class UserService extends BaseService<User,Integer> {
      *      userName    昵称       非空
      *  2.设置相关字段的默认值
      *  3.执行添加操作，判断受影响的行数
-     * @param user
+     * @param userModel
      */
     @Transactional(propagation = Propagation.REQUIRED)
-    public void addUser(User user){
+    public void addUser(UserModel userModel){
+        User user =new User();
         /* 1.参数校验 */
-        checkUserParams(user.getUserId(), user.getIsVip(), user.getUserName());
-
+        checkUserParams(userModel.getUserId(), userModel.getIsVip(), userModel.getUserName());
+        //存入USER表的信息
+        user.setUserName(userModel.getUserName());
+        user.setUserGender(userModel.getUserGender());
+        user.setIsVip(userModel.getIsVip());
+        user.setUserBirthday(userModel.getUserBirthday());
         /* 2.设置相关字段的默认值 */
-        //是否会员默认为非会员
-        user.setIsVip(0);
         //注册时间默认是系统当前时间
         user.setUserJoinDate(new Date());
-
         /* 3.执行添加操作，判断受影响的行数 */
-
         AssertUtil.isTrue(userMapper.queryUserByName(user.getUserName()) != null, "该用户名已存在！");
-
-        AssertUtil.isTrue(userMapper.insertSelective(user) != 1, "添加用户失败！");
-
-
-        /*--*/
-
-
+        //添加到数据据，返回主键
+        AssertUtil.isTrue(userMapper.insertHasKey(user) != 1, "添加用户失败！");
+        //存入用户角色user_role表
+        if(userModel.getRoleId()!=null){
+            UserRole userRole = new UserRole();
+            userRole.setRoleId(userModel.getRoleId());
+            userRole.setUserId(user.getUserId());
+            userRole.setCreateDate(new Date());
+            userRole.setUpdateDate(new Date());
+            //与数据交互
+            AssertUtil.isTrue(userRoleMapper.insertSelective(userRole)<1,"用户角色新增失败");
+        }
     }
+
+
+
+
+
 
 
     /**
@@ -173,28 +186,35 @@ public class UserService extends BaseService<User,Integer> {
      *      userName    昵称       非空
      *  2.设置相关字段的默认值
      *  3.执行添加操作，判断受影响的行数
-     * @param user
+     * @param userModel
      */
     @Transactional(propagation = Propagation.REQUIRED)
-    public void updateUser(User user){
+    public void updateUser(UserModel userModel){
         /* 1.参数校验 */
         //AssertUtil.isTrue(null == user.getUserName(), "待更新记录不存在！");
         //用户ID  非空  数据库中对应的记录存在
-        AssertUtil.isTrue(null == user.getUserId(), "待更新记录不存在！");
+        AssertUtil.isTrue(null == userModel.getUserId(), "待更新记录不存在！");
         //通过主键查询对象
-        User temp = userMapper.selectByPrimaryKey(user.getUserId());
+        User temp = userMapper.selectByPrimaryKey(userModel.getUserId());
         //判断数据库中对应的记录是否存在
         AssertUtil.isTrue(temp == null, "待更新记录不存在！");
 
-        checkUserParams(user.getUserId(), user.getIsVip(), user.getUserName());
+        checkUserParams(userModel.getUserId(), userModel.getIsVip(), userModel.getUserName());
 
 
-        User user1 = userMapper.queryUserByName(user.getUserName());
+        User user1 = userMapper.queryUserByName(userModel.getUserName());
         AssertUtil.isTrue(user1 != null &&
-                (!user1.getUserId().equals(user.getUserId())),"该用户已存在！");
+                (!user1.getUserId().equals(userModel.getUserId())),"该用户已存在！");
 
 
-        AssertUtil.isTrue(userMapper.updateByPrimaryKeySelective(user) != 1, "用户更新失败！");
+        AssertUtil.isTrue(userMapper.updateByUserModel(userModel) != 1, "用户更新失败！");
+
+        /*//先清除用户的角色
+        deleteUserRole(userModel.getUserId());
+        //将新的角色赋予用户
+        addUserRoles(userModel.getUserId(), userModel.getRoleId());*/
+        updateUserRole(userModel);
+
     }
 
     /*---------------------------------------------------------*/
@@ -208,7 +228,60 @@ public class UserService extends BaseService<User,Integer> {
         AssertUtil.isTrue(null == ids || ids.length < 1, "待删除记录不存在！");
         //执行删除(更新)操作，判断受影响的行数
         AssertUtil.isTrue(userMapper.deleteBatch(ids) != ids.length, "用户删除失败！");
+        for (Integer userId:ids){
+            deleteUserRole(userId);
+        }
     }
 
+
+    private void deleteUserRole(Integer userId){
+        //查询除该用户的所有角色信息
+        UserRole userRoles = userRoleMapper.queryUserRole(userId);
+        if(userRoles != null){ //有角色信息
+            AssertUtil.isTrue(userRoleMapper.deleteUserRole(userId)<1
+                    , "用户角色信息清除异常");
+        }
+    }
+
+    /*
+    private void addUserRoles(Integer userId,Integer roleId){
+            UserRole userRole=new UserRole();
+            userRole.setUserId(userId);
+            userRole.setRoleId(roleId);
+            userRole.setCreateDate(new Date());
+            userRole.setUpdateDate(new Date());
+        //与数据库交互
+        AssertUtil.isTrue(userRoleMapper.insertUserRole(userRole)<1,"用户角色变更错误");
+
+    }*/
+
+    /*---------------------------------------------------------*/
+
+    public void updateUserRole(UserModel userModel){
+        //DELETE
+        deleteUserRole(userModel.getUserId());
+        //insert
+        UserRole userRole=new UserRole();
+        userRole.setUserId(userModel.getUserId());
+        userRole.setRoleId(userModel.getRoleId());
+        userRole.setCreateDate(new Date());
+        userRole.setUpdateDate(new Date());
+        //与数据库交互
+        AssertUtil.isTrue(userRoleMapper.insertUserRole(userRole)<1,"用户角色变更错误");
+    }
+
+
+    /**
+     * 查询所有的角色列表
+     * @return
+     */
+    public List<Map<String,Object>> queryAllRoles(){
+        return userMapper.queryAllRoles();
+    }
+
+    public UserModel selectUserByUserId(Integer userId){
+        AssertUtil.isTrue(null == userId,"查询用户信息异常");
+        return userMapper.selectUserByUserId(userId);
+    }
 
 }

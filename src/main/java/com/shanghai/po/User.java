@@ -19,6 +19,7 @@ public class User {
 
     private Integer isValid;
 
+
     public Integer getUserId() {
         return userId;
     }
