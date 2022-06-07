@@ -12,18 +12,19 @@
 </head>
 <body>
 <form class="layui-form">
+    <input name="typeId" type="hidden" value="${(type.typeId)!}"/>
 <div class="layui-form layuimini-form">
 
     <div class="layui-form-item">
         <label class="layui-form-label">名称</label>
         <div class="layui-input-block">
-            <input type="email" name="typeName" placeholder="请输入名称" value="" class="layui-input">
+            <input type="text" name="typeName" placeholder="请输入名称" value="${(type.typeName)!}" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">介绍</label>
         <div class="layui-input-block">
-            <input type="text" name="typeInfo" placeholder="请输入简介" value="" class="layui-input">
+            <input type="text" name="typeInfo" placeholder="请输入简介" value="${(type.typeInfo)!}" class="layui-input">
         </div>
     </div>
 
@@ -51,8 +52,8 @@
             var url=ctx+"/type/add";
 
            // 判断隐藏域中的ID是否为空，如果不为空则为修改操作
-            if ($("input[name='id']").val()) {
-                url = ctx + "/sale_chance/update";
+            if ($("input[name='typeId']").val()) {
+                url = ctx + "/type/update";
             }
 
             $.post(url,data.field,function (result){

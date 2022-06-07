@@ -40,7 +40,11 @@ public class TypeService extends BaseService<Type,Integer> {
     public void addType(Type type){
         //参数校验
         checkAddType(type.getTypeName(),type.getTypeInfo());
+        //待更新记录是否存在
+        Type type1 = typeMapper.selectByPrimaryKey(type.getTypeId());
+        AssertUtil.isTrue(type1==null,"待更新数据不存在");
 
+        //判断名称是否存在（不存在表示名称可用）
         AssertUtil.isTrue(typeMapper.queryTypeByName(type.getTypeName())!=null,"重名，请重新输入");
         //设置默认值
         type.setIsValid(1);
@@ -55,9 +59,21 @@ public class TypeService extends BaseService<Type,Integer> {
         checkAddType(type.getTypeName(),type.getTypeInfo());
         //校验修改名称唯一
         Type type1 = typeMapper.queryTypeByName(type.getTypeName());
-        AssertUtil.isTrue(type1!=null && !type1.getTypeId().equals(type.getTypeId()),"名称已存在");
-    }
+        AssertUtil.isTrue(type1!=null && (!type1.getTypeId().equals(type.getTypeId())),"名称已存在");
+        //设置默认值
+        type.setIsValid(1);
+        //执行
+        AssertUtil.isTrue(typeMapper.updateByPrimaryKeySelective(type)<1,"修改失败");
 
+    }
+    //批量删除
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void deleteType(Integer[] ids) {
+        // 判断要删除的id是否为空
+        AssertUtil.isTrue(null == ids || ids.length == 0, "请选择需要删除的数据！");
+        // 删除数据
+        AssertUtil.isTrue(typeMapper.deleteBatch(ids)<1, "音乐类型删除失败！");
+    }
     //名称，简介
     private void checkAddType(String typeName, String typeInfo) {
         AssertUtil.isTrue(StringUtils.isBlank(typeName),"类型名称不能为空");
