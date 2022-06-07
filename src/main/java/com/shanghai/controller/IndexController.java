@@ -2,9 +2,9 @@ package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
-import com.shanghai.po.User;
 import com.shanghai.po.vo.UserModel;
 import com.shanghai.po.vo.UserPasswordModel;
+import com.shanghai.service.IndexService;
 import com.shanghai.service.UserService;
 import com.shanghai.utils.LoginUserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * 公有功能实现
@@ -23,6 +24,8 @@ public class IndexController extends BaseController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private IndexService indexService;
 
     //访问模板首页
     @RequestMapping("indexModel")
@@ -97,6 +100,19 @@ public class IndexController extends BaseController {
     @ResponseBody
     public ResultInfo loginAction(@RequestBody UserModel userModel){
         return userService.login(userModel);
+    }
+
+    /**
+     * 菜单初始化
+     * @param request
+     * @return
+     */
+    @RequestMapping("initMenu")
+    @ResponseBody
+    public Map<String,Object> initMenu(HttpServletRequest request){
+        //获取当前用户id
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        return indexService.initMenu(userId);
     }
 
 

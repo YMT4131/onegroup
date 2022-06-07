@@ -1,7 +1,7 @@
 {
   "homeInfo": {
     "title": "首页",
-    "href": "welcome"
+    "href": "welcome/index"
   },
   "logoInfo": {
     "title": "音乐平台",
@@ -17,13 +17,13 @@
       "child": [
         {
           "title": "歌曲管理",
-          "href": "page/table.html",
+          "href": "musicManage/toSongManagePage",
           "icon": "fa fa-headphones",
           "target": "_self"
         },
         {
           "title": "歌手管理",
-          "href": "page/table.html",
+          "href": "singer/index",
           "icon": "fa fa-smile-o",
           "target": "_self"
         },
@@ -35,7 +35,7 @@
         },
         {
           "title": "音乐类型管理",
-          "href": "page/table.html",
+          "href": "type/index",
           "icon": "fa fa-star-o",
           "target": "_self"
         },
@@ -53,7 +53,7 @@
         },
         {
           "title": "角色管理",
-          "href": "page/table.html",
+          "href": "role/index",
           "icon": "fa fa-group",
           "target": "_self"
         }

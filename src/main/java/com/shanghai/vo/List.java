@@ -1,6 +1,6 @@
 package com.shanghai.vo;
 
-public class List {
+public class List<S> {
     private Integer listId;
 
     private String listName;
