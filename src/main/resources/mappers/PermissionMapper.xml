@@ -111,11 +111,11 @@
     where
         role_id=#{roleId}
   </select>
-  <delete id="deleteByRoleId" parameterType="int">
+  <delete id="deleteByRoleId" parameterType="java.lang.Integer">
         delete from
             permission
         where
-            role_id=#(roleId)
+            role_id=#{roleId}
 
   </delete>
   <!-- 批量添加-->
