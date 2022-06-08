@@ -144,6 +144,8 @@ public class UserService extends BaseService<User,Integer> {
         /* 2.设置相关字段的默认值 */
         //注册时间默认是系统当前时间
         user.setUserJoinDate(new Date());
+
+        user.setUserPwd(Md5Util.encode("123"));
         /* 3.执行添加操作，判断受影响的行数 */
         AssertUtil.isTrue(userMapper.queryUserByName(user.getUserName()) != null, "该用户名已存在！");
         //添加到数据据，返回主键
