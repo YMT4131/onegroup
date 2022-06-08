@@ -36,7 +36,7 @@ layui.use(['form', 'table'], function () {
         var result = data.field
 
         //执行搜索重载
-        table.reload('currentTableId', {
+        table.reload('userTable', {
             page: {
                 curr: 1 //重新从第一页开始
             }

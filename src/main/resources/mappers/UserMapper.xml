@@ -137,7 +137,7 @@
   select
     u.user_id as userId, u.user_name as userName, u.user_pwd as userPwd, u.user_gender as userGender,
          u.user_birthday as userBirthday, u.user_join_date as userJoinDate,
-         u.is_VIP as isVIP,r.role_id as roleId,rr.role_name as roleName
+         u.is_VIP as isVip,r.role_id as roleId,rr.role_name as roleName
     from
     user u
     left join user_role r
@@ -152,7 +152,7 @@
     <if test="userId != null and userId != ''">
       and u.user_id = #{userId}
     </if>
-    <if test="isVip != null and isVip != ''">
+    <if test="isVip != null">
       and u.is_VIP = #{isVip}
     </if>
     <if test="userName != null and userName != ''">
