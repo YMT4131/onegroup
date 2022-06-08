@@ -25,10 +25,10 @@ public class InterceptorConfig implements WebMvcConfigurer {
                         ,"/api/**","/page/**","/css/**","/images/**","/js/**","/lib/**"); //设置放行地址
     }
 
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController( "/" ).setViewName( "login" );
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-
-    }
+//    @Override
+//    public void addViewControllers(ViewControllerRegistry registry) {
+//        registry.addViewController( "/" ).setViewName( "login" );
+//        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+//
+//    }
 }

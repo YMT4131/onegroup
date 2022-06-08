@@ -33,6 +33,14 @@ public class IndexController extends BaseController {
     public String toIndex(){
         return "indexModel";
     }
+    @RequestMapping("/")
+    public String toPage(){
+        return "login";
+    }
+    @RequestMapping("404")
+    public String toErrorPage(){
+        return "404";
+    }
 
     /**
      * 跳转到登录页面
