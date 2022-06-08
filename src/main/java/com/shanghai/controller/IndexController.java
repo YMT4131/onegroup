@@ -2,6 +2,7 @@ package com.shanghai.controller;
 
 import com.shanghai.base.BaseController;
 import com.shanghai.base.ResultInfo;
+import com.shanghai.po.User;
 import com.shanghai.po.vo.UserModel;
 import com.shanghai.po.vo.UserPasswordModel;
 import com.shanghai.service.IndexService;
@@ -47,7 +48,10 @@ public class IndexController extends BaseController {
      * @return
      */
     @RequestMapping("main")
-    public String toMainPage(){
+    public String toMainPage(HttpServletRequest request){
+        Integer userId = LoginUserUtil.releaseUserIdFromCookie(request);
+        User user = userService.selectByPrimaryKey(userId);
+        request.setAttribute("user", user);
         return "main";
     }
 
