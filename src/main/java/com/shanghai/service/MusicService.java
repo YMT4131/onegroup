@@ -130,7 +130,6 @@ public class MusicService extends BaseService<Music,Integer> {
     }
     //添加操作--2.设置默认值
     private void setParamsDefaultValue(Music music) {
-        music.setIsForVip(0);
         music.setIsValid(1);
     }
 
